@@ -596,37 +596,6 @@ footer.main-footer {
   background: #222;
 }
 
-footer.main-footer p.social a {
-  margin-left: 10px;
-  color: #fff;
-  display: inline-block;
-  width: 45px;
-  height: 45px;
-  border-radius: 25px;
-  line-height: 45px;
-  font-size: 1.3rem;
-  vertical-align: middle;
-  text-align: center;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-footer.main-footer p.social a.facebook {
-  background-color: #4460ae;
-}
-
-footer.main-footer p.social a.gplus {
-  background-color: #c21f25;
-}
-
-footer.main-footer p.social a.instagram {
-  background-color: #cd4378;
-}
-
-footer.main-footer p.social a.email {
-  background-color: #4a7f45;
-}
-
 footer.main-footer p {
   margin: 0;
   color: #eee;

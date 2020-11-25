@@ -1,7 +1,30 @@
-/* .bounding-box {
-  background-image: url(../img/dream-funding.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: auto;
-} */
+ p.social a {
+  margin-left: 10px;
+  color: #fff;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 25px;
+  line-height: 45px;
+  font-size: 1.3rem;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+ p.social a.facebook {
+  background-color: black;
+}
+
+ p.social a.gplus {
+  background-color: #c21f25;
+}
+
+ p.social a.instagram {
+  background-color: #cd4378;
+}
+
+ p.social a.email {
+  background-color: #4a7f45;
+}
