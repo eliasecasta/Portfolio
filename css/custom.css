@@ -13,16 +13,16 @@
   transition: all 0.3s;
 }
 
- p.social a.facebook {
+ p.social a.github {
   background-color: black;
 }
 
  p.social a.gplus {
-  background-color: #c21f25;
+  background-color: #0A66C2;
 }
 
- p.social a.instagram {
-  background-color: #cd4378;
+ p.social a.linkedin {
+  background-color: #0A66C2;
 }
 
  p.social a.email {
