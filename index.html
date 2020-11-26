@@ -9,14 +9,23 @@
     <meta name="robots" content="all,follow" />
     <meta property="og:title" content="Elías Castañeda's Portfolio" />
     <meta property="og:image" content="img/about.jpg" />
-    <meta property="og:description" content="Take a look to my personal portfolio!" />
+    <meta
+      property="og:description"
+      content="Take a look to my personal portfolio!"
+    />
     <meta property="og:url" content="https://e71az.github.io/Portfolio/" />
     <meta name="twitter:card" content="summary_large_image" />
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
     <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css"
+    />
     <!-- Google fonts - Roboto + Roboto Slab-->
     <link
       rel="stylesheet"
@@ -57,14 +66,14 @@
 
           <div class="col-2 mt-3 text-center text-lg-left">
             <p class="social">
-              <a href="https://github.com/e71az" class="external github wow fadeInUp"
+              <a href="#" class="external github wow fadeInUp"
                 ><i class="fa fa-github"></i></a
               ><a
-                href="https://www.linkedin.com/in/e71az/"
+                href="#"
                 data-wow-delay="0.2s"
                 class="external linkedin wow fadeInUp"
-                ><i class="fab fa-linkedin-in"></i></a
-              >
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </p>
           </div>
 
@@ -841,7 +850,18 @@
         </header>
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <form id="contact-form" method="post" action="">
+            <form
+              id="contact-form"
+              method="POST"
+              action="https://formspree.io/f/xayldebv"
+              role="form"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="Contact request from personal website"
+              />
+
               <div class="messages"></div>
               <div class="controls">
                 <div class="row">
@@ -852,7 +872,9 @@
                       placeholder="Your firstname *"
                       required="required"
                       class="form-control"
+                      data-error="Firstname is required."
                     />
+                    <div class="help-block with-errors"></div>
                   </div>
                   <div class="col-md-6">
                     <input
@@ -861,20 +883,24 @@
                       placeholder="Your lastname *"
                       required="required"
                       class="form-control"
+                      data-error="Lastname is required."
                     />
+                    <div class="help-block with-errors"></div>
                   </div>
                   <div class="col-md-6">
                     <input
-                      type="text"
-                      name="email"
+                      type="email"
+                      name="_replyto"
                       placeholder="Your email *"
                       required="required"
                       class="form-control"
+                      data-error="Valid email is required."
                     />
+                    <div class="help-block with-errors"></div>
                   </div>
                   <div class="col-md-6">
                     <input
-                      type="text"
+                      type="tel"
                       name="phone"
                       placeholder="Your phone"
                       class="form-control"
@@ -887,10 +913,16 @@
                       rows="4"
                       required="required"
                       class="form-control"
+                      data-error="Please leave me a message."
                     ></textarea>
+                    <div class="help-block with-errors"></div>
                   </div>
                   <div class="col-md-12 text-center">
-                    <button type="submit" class="btn btn-outline-primary">
+                    <button
+                      type="submit"
+                      value="Send"
+                      class="btn btn-outline-primary"
+                    >
                       Send message
                     </button>
                   </div>
@@ -930,6 +962,11 @@
     <script src="vendor/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="vendor/jquery.counterup/jquery.counterup.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"
+      integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8="
+      crossorigin="anonymous"
+    ></script>
     <script src="js/front.js"></script>
   </body>
 </html>
