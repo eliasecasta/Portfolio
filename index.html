@@ -1,582 +1,691 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elías Castañeda | Full Stack Developer</title>
-    <meta name="description" content="Full Stack Web Developer specializing in Ruby on Rails, React, and modern web technologies. Based in Mexico.">
-    
+    <meta
+      name="description"
+      content="Full Stack Web Developer specializing in Ruby on Rails, React, and modern web technologies. Based in Mexico."
+    />
+
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="apple-touch-icon" href="img/favicon.png">
-    
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/favicon.png" />
+
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <!-- Particles.js for animated background -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/neon-theme.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/neon-theme.css" />
+  </head>
+  <body>
     <!-- Animated Background -->
     <div id="particles-js"></div>
-    
+
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <span class="logo-bracket">{</span>EC<span class="logo-bracket">}</span>
-            </a>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="nav-social">
-                <a href="https://github.com/eliasecasta" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/eliasecasta/" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
-            <button class="hamburger" aria-label="Toggle menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">
+          <span class="logo-bracket">{</span>EC<span class="logo-bracket"
+            >}</span
+          >
+        </a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="nav-social">
+          <a
+            href="https://github.com/eliasecasta"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/eliasecasta/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
         </div>
+        <button class="hamburger" aria-label="Toggle menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text" data-animate="fadeInUp">
-                <h1 class="hero-title">
-                    <span class="greeting">Hello, I'm</span>
-                    <span class="name">Elías Castañeda</span>
-                </h1>
-                <div class="typewriter">
-                    <span class="typewriter-text"></span>
-                    <span class="cursor">|</span>
-                </div>
-                <p class="hero-description">
-                    Full Stack Developer crafting elegant, high-performance web applications 
-                    with modern technologies and clean architecture.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
-                </div>
-            </div>
-            <div class="hero-visual" data-animate="fadeInRight">
-                <div class="code-window">
-                    <div class="code-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                    </div>
-                    <div class="code-content">
-                        <code>
-<span class="code-comment">// Building the future</span>
-<span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
-  <span class="code-key">name</span>: <span class="code-string">'Elías Castañeda'</span>,
-  <span class="code-key">role</span>: <span class="code-string">'Full Stack Developer'</span>,
-  <span class="code-key">stack</span>: [<span class="code-string">'Rails'</span>, <span class="code-string">'React'</span>, <span class="code-string">'Next.js'</span>],
-  <span class="code-key">passion</span>: <span class="code-string">'Clean Code'</span>
-};
-                        </code>
-                    </div>
-                </div>
-            </div>
+      <div class="hero-content">
+        <div class="hero-text" data-animate="fadeInUp">
+          <h1 class="hero-title">
+            <span class="greeting">Hello, I'm</span>
+            <span class="name">Elías Castañeda</span>
+          </h1>
+          <div class="typewriter">
+            <span class="typewriter-text"></span>
+            <span class="cursor">|</span>
+          </div>
+          <p class="hero-description">
+            Full Stack Developer crafting elegant, high-performance web
+            applications with modern technologies and clean architecture.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+          </div>
         </div>
-        <div class="scroll-indicator" data-animate="fadeIn" data-delay="1000">
-            <span>Scroll to explore</span>
-            <div class="scroll-arrow"></div>
+        <div class="hero-visual" data-animate="fadeInRight">
+          <div class="code-window">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="code-content">
+              <code>
+                <span class="code-comment">// Building the future</span>
+                <span class="code-keyword">const</span>
+                <span class="code-variable">developer</span> = {
+                <span class="code-key">name</span>:
+                <span class="code-string">'Elías Castañeda'</span>,
+                <span class="code-key">role</span>:
+                <span class="code-string">'Full Stack Developer'</span>,
+                <span class="code-key">stack</span>: [<span class="code-string"
+                  >'Rails'</span
+                >, <span class="code-string">'React'</span>,
+                <span class="code-string">'Next.js'</span>],
+                <span class="code-key">passion</span>:
+                <span class="code-string">'Clean Code'</span>
+                };
+              </code>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="scroll-indicator" data-animate="fadeIn" data-delay="1000">
+        <span>Scroll to explore</span>
+        <div class="scroll-arrow"></div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section">
-        <div class="container">
-            <div class="section-header" data-animate="fadeInUp">
-                <h2 class="section-title">About Me</h2>
-                <div class="section-line"></div>
-            </div>
-            
-            <div class="about-grid">
-                <div class="about-text" data-animate="fadeInLeft">
-                    <h3>Full Stack Developer & IT Engineer</h3>
-                    <p>
-                        With over 4 years of experience in software development, I specialize in building 
-                        scalable web applications that combine beautiful interfaces with robust backend systems. 
-                        My journey includes mentoring 500+ developers and reviewing 1,500+ code projects at Microverse.
-                    </p>
-                    <p>
-                        Currently working as a freelance developer, I help businesses transform their ideas into 
-                        production-ready applications using modern technologies like Ruby on Rails, React, and Next.js.
-                    </p>
-                    
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">4+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">Projects Delivered</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">500+</div>
-                            <div class="stat-label">Developers Mentored</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-visual" data-animate="fadeInRight">
-                    <div class="experience-card">
-                        <div class="card-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h4>Current Focus</h4>
-                        <ul>
-                            <li>AI-enhanced web applications</li>
-                            <li>Real-time features with WebSockets</li>
-                            <li>Performance optimization</li>
-                            <li>Modern DevOps practices</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header" data-animate="fadeInUp">
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
         </div>
+
+        <div class="about-grid">
+          <div class="about-text" data-animate="fadeInLeft">
+            <h3>Full Stack Developer & IT Engineer</h3>
+            <p>
+              With over 4 years of experience in software development, I
+              specialize in building scalable web applications that combine
+              beautiful interfaces with robust backend systems. My journey
+              includes mentoring 500+ developers and reviewing 1,500+ code
+              projects at Microverse.
+            </p>
+            <p>
+              Currently working as a freelance developer, I help businesses
+              transform their ideas into production-ready applications using
+              modern technologies like Ruby on Rails, React, and Next.js.
+            </p>
+
+            <div class="about-stats">
+              <div class="stat-item">
+                <div class="stat-number">4+</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Projects Delivered</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Developers Mentored</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-visual" data-animate="fadeInRight">
+            <div class="experience-card">
+              <div class="card-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h4>Current Focus</h4>
+              <ul>
+                <li>AI-enhanced web applications</li>
+                <li>Real-time features with WebSockets</li>
+                <li>Performance optimization</li>
+                <li>Modern DevOps practices</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="section bg-darker">
-        <div class="container">
-            <div class="section-header" data-animate="fadeInUp">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">A selection of my recent work</p>
-                <div class="section-line"></div>
-            </div>
-
-            <div class="projects-grid">
-                <!-- Project 1: Riven ROI -->
-                <div class="project-card" data-animate="fadeInUp">
-                    <div class="project-image">
-                        <img src="img/projects/riven-roi.png" alt="Riven ROI Dashboard">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://riven-roi.vercel.app/" target="_blank" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Live Demo</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">Next.js</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">Tailwind</span>
-                        </div>
-                        <h3 class="project-title">Riven ROI</h3>
-                        <p class="project-description">
-                            Advanced Warframe analytics dashboard tracking market trends, 
-                            pricing volatility, and trading opportunities for Riven mods.
-                        </p>
-                        <div class="project-features">
-                            <span><i class="fas fa-chart-line"></i> Real-time analytics</span>
-                            <span><i class="fas fa-database"></i> Market data API</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: Umbala Gym -->
-                <div class="project-card" data-animate="fadeInUp" data-delay="100">
-                    <div class="project-image">
-                        <img src="img/projects/umbala.png" alt="Umbala Gym Website">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://umbala.com.mx/" target="_blank" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Live Site</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-badge">
-                            <i class="fas fa-lock"></i>
-                            <span>Client Work</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Rails API</span>
-                            <span class="tag">PostgreSQL</span>
-                        </div>
-                        <h3 class="project-title">Umbala Gym</h3>
-                        <p class="project-description">
-                            Full-stack fitness platform with class scheduling, membership management, 
-                            and real-time booking system for a local gym.
-                        </p>
-                        <div class="project-features">
-                            <span><i class="fas fa-calendar-check"></i> Booking system</span>
-                            <span><i class="fas fa-mobile-alt"></i> Responsive design</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: FIS Certificaciones -->
-                <div class="project-card" data-animate="fadeInUp" data-delay="200">
-                    <div class="project-image">
-                        <img src="img/projects/fiscertificaciones.png" alt="FIS Certificaciones Platform">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://fiscertificaciones.com.mx/" target="_blank" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Live Site</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-badge">
-                            <i class="fas fa-lock"></i>
-                            <span>Client Work</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">WordPress</span>
-                            <span class="tag">Custom Theme</span>
-                            <span class="tag">PHP</span>
-                        </div>
-                        <h3 class="project-title">FIS Certificaciones</h3>
-                        <p class="project-description">
-                            Professional certification platform for physiotherapy courses with 
-                            student management, certificate verification, and payment integration.
-                        </p>
-                        <div class="project-features">
-                            <span><i class="fas fa-certificate"></i> Certificate system</span>
-                            <span><i class="fas fa-users"></i> Student portal</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4: AbiLoadoutAI -->
-                <div class="project-card" data-animate="fadeInUp" data-delay="300">
-                    <div class="project-image">
-                        <img src="img/projects/abiloadoutai.png" alt="AbiLoadoutAI Interface">
-                        <div class="project-badge">
-                            <i class="fas fa-lock"></i>
-                            <span>Private Project</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">Rails 8</span>
-                            <span class="tag">OpenAI</span>
-                            <span class="tag">Hotwire</span>
-                        </div>
-                        <h3 class="project-title">AbiLoadoutAI</h3>
-                        <p class="project-description">
-                            Full-stack Rails 8 platform with OpenAI integration that generates 
-                            optimized gaming loadouts. Features JWT auth, Sidekiq background 
-                            jobs, and a Hotwire-powered reactive UI.
-                        </p>
-                        <div class="project-features">
-                            <span><i class="fas fa-robot"></i> OpenAI integration</span>
-                            <span><i class="fas fa-bolt"></i> Sidekiq + Redis</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5: The Hive Discord Bot -->
-                <div class="project-card" data-animate="fadeInUp" data-delay="400">
-                    <div class="project-image">
-                        <div class="placeholder-image">
-                            <i class="fab fa-discord"></i>
-                            <span>Discord Bot</span>
-                        </div>
-                        <div class="project-badge">
-                            <i class="fas fa-lock"></i>
-                            <span>Private Project</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">Ruby</span>
-                            <span class="tag">Discord API</span>
-                            <span class="tag">PostgreSQL</span>
-                        </div>
-                        <h3 class="project-title">The Hive Discord Bot</h3>
-                        <p class="project-description">
-                            Feature-rich Discord bot for the V Rising gaming community with 
-                            gear tracking, build sharing, and automated server management.
-                        </p>
-                        <div class="project-features">
-                            <span><i class="fas fa-robot"></i> Bot automation</span>
-                            <span><i class="fas fa-users"></i> Community tools</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6: V Rising API -->
-                <div class="project-card" data-animate="fadeInUp" data-delay="500">
-                    <div class="project-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-code"></i>
-                            <span>REST API</span>
-                        </div>
-                        <div class="project-badge">
-                            <i class="fas fa-lock"></i>
-                            <span>Private Project</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">Rails API</span>
-                            <span class="tag">JSON</span>
-                            <span class="tag">Redis</span>
-                        </div>
-                        <h3 class="project-title">V Rising API</h3>
-                        <p class="project-description">
-                            Comprehensive RESTful API serving game data for V Rising, 
-                            with real-time updates and caching for optimal performance.
-                        </p>
-                        <div class="project-features">
-                            <span><i class="fas fa-server"></i> API endpoints</span>
-                            <span><i class="fas fa-bolt"></i> Cached responses</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 7: Mercado Digital -->
-                <div class="project-card" data-animate="fadeInUp" data-delay="600">
-                    <div class="project-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span>E-commerce</span>
-                        </div>
-                        <div class="project-badge">
-                            <i class="fas fa-lock"></i>
-                            <span>Client Work</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">Rails 8</span>
-                            <span class="tag">Hotwire</span>
-                            <span class="tag">Docker</span>
-                        </div>
-                        <h3 class="project-title">Mercado Digital</h3>
-                        <p class="project-description">
-                            Complete e-commerce platform with product management, 
-                            shopping cart, payment integration, and admin dashboard.
-                        </p>
-                        <div class="project-features">
-                            <span><i class="fas fa-credit-card"></i> Payment system</span>
-                            <span><i class="fas fa-box"></i> Inventory management</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="projects-cta" data-animate="fadeInUp">
-                <p>Interested in seeing more of my work?</p>
-                <a href="https://github.com/eliasecasta" target="_blank" class="btn btn-outline">
-                    <i class="fab fa-github"></i> View All on GitHub
-                </a>
-            </div>
+      <div class="container">
+        <div class="section-header" data-animate="fadeInUp">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">A selection of my recent work</p>
+          <div class="section-line"></div>
         </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Riven ROI -->
+          <div class="project-card" data-animate="fadeInUp">
+            <div class="project-image">
+              <img src="img/projects/riven-roi.png" alt="Riven ROI Dashboard" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://riven-roi.vercel.app/"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Tailwind</span>
+              </div>
+              <h3 class="project-title">Riven ROI</h3>
+              <p class="project-description">
+                Advanced Warframe analytics dashboard tracking market trends,
+                pricing volatility, and trading opportunities for Riven mods.
+              </p>
+              <div class="project-features">
+                <span
+                  ><i class="fas fa-chart-line"></i> Real-time analytics</span
+                >
+                <span><i class="fas fa-database"></i> Market data API</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Umbala Gym -->
+          <div class="project-card" data-animate="fadeInUp" data-delay="100">
+            <div class="project-image">
+              <img src="img/projects/umbala.png" alt="Umbala Gym Website" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://umbala.com.mx/"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Live Site</span>
+                  </a>
+                </div>
+              </div>
+              <div class="project-badge">
+                <i class="fas fa-lock"></i>
+                <span>Client Work</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">Rails API</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+              <h3 class="project-title">Umbala Gym</h3>
+              <p class="project-description">
+                Full-stack fitness platform with class scheduling, membership
+                management, and real-time booking system for a local gym.
+              </p>
+              <div class="project-features">
+                <span
+                  ><i class="fas fa-calendar-check"></i> Booking system</span
+                >
+                <span><i class="fas fa-mobile-alt"></i> Responsive design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: FIS Certificaciones -->
+          <div class="project-card" data-animate="fadeInUp" data-delay="200">
+            <div class="project-image">
+              <img
+                src="img/projects/fiscertificaciones.png"
+                alt="FIS Certificaciones Platform"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://fiscertificaciones.com.mx/"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Live Site</span>
+                  </a>
+                </div>
+              </div>
+              <div class="project-badge">
+                <i class="fas fa-lock"></i>
+                <span>Client Work</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">WordPress</span>
+                <span class="tag">Custom Theme</span>
+                <span class="tag">PHP</span>
+              </div>
+              <h3 class="project-title">FIS Certificaciones</h3>
+              <p class="project-description">
+                Professional certification platform for physiotherapy courses
+                with student management, certificate verification, and payment
+                integration.
+              </p>
+              <div class="project-features">
+                <span
+                  ><i class="fas fa-certificate"></i> Certificate system</span
+                >
+                <span><i class="fas fa-users"></i> Student portal</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: AbiLoadoutAI -->
+          <div class="project-card" data-animate="fadeInUp" data-delay="300">
+            <div class="project-image">
+              <img
+                src="img/projects/abiloadoutai.png"
+                alt="AbiLoadoutAI Interface"
+              />
+              <div class="project-badge">
+                <i class="fas fa-lock"></i>
+                <span>Private Project</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Rails 8</span>
+                <span class="tag">OpenAI</span>
+                <span class="tag">Hotwire</span>
+              </div>
+              <h3 class="project-title">AbiLoadoutAI</h3>
+              <p class="project-description">
+                Full-stack Rails 8 platform with OpenAI integration that
+                generates optimized gaming loadouts. Features JWT auth, Sidekiq
+                background jobs, and a Hotwire-powered reactive UI.
+              </p>
+              <div class="project-features">
+                <span><i class="fas fa-robot"></i> OpenAI integration</span>
+                <span><i class="fas fa-bolt"></i> Sidekiq + Redis</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: The Hive Discord Bot -->
+          <div class="project-card" data-animate="fadeInUp" data-delay="400">
+            <div class="project-image">
+              <div class="placeholder-image">
+                <i class="fab fa-discord"></i>
+                <span>Discord Bot</span>
+              </div>
+              <div class="project-badge">
+                <i class="fas fa-lock"></i>
+                <span>Private Project</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Ruby</span>
+                <span class="tag">Discord API</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+              <h3 class="project-title">The Hive Discord Bot</h3>
+              <p class="project-description">
+                Feature-rich Discord bot for the V Rising gaming community with
+                gear tracking, build sharing, and automated server management.
+              </p>
+              <div class="project-features">
+                <span><i class="fas fa-robot"></i> Bot automation</span>
+                <span><i class="fas fa-users"></i> Community tools</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: V Rising API -->
+          <div class="project-card" data-animate="fadeInUp" data-delay="500">
+            <div class="project-image">
+              <div class="placeholder-image">
+                <i class="fas fa-code"></i>
+                <span>REST API</span>
+              </div>
+              <div class="project-badge">
+                <i class="fas fa-lock"></i>
+                <span>Private Project</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Rails API</span>
+                <span class="tag">JSON</span>
+                <span class="tag">Redis</span>
+              </div>
+              <h3 class="project-title">V Rising API</h3>
+              <p class="project-description">
+                Comprehensive RESTful API serving game data for V Rising, with
+                real-time updates and caching for optimal performance.
+              </p>
+              <div class="project-features">
+                <span><i class="fas fa-server"></i> API endpoints</span>
+                <span><i class="fas fa-bolt"></i> Cached responses</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 7: Mercado Digital -->
+          <div class="project-card" data-animate="fadeInUp" data-delay="600">
+            <div class="project-image">
+              <div class="placeholder-image">
+                <i class="fas fa-shopping-cart"></i>
+                <span>E-commerce</span>
+              </div>
+              <div class="project-badge">
+                <i class="fas fa-lock"></i>
+                <span>Client Work</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Rails 8</span>
+                <span class="tag">Hotwire</span>
+                <span class="tag">Docker</span>
+              </div>
+              <h3 class="project-title">Mercado Digital</h3>
+              <p class="project-description">
+                Complete e-commerce platform with product management, shopping
+                cart, payment integration, and admin dashboard.
+              </p>
+              <div class="project-features">
+                <span><i class="fas fa-credit-card"></i> Payment system</span>
+                <span><i class="fas fa-box"></i> Inventory management</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-cta" data-animate="fadeInUp">
+          <p>Interested in seeing more of my work?</p>
+          <a
+            href="https://github.com/eliasecasta"
+            target="_blank"
+            class="btn btn-outline"
+          >
+            <i class="fab fa-github"></i> View All on GitHub
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="section">
-        <div class="container">
-            <div class="section-header" data-animate="fadeInUp">
-                <h2 class="section-title">Tech Stack</h2>
-                <p class="section-subtitle">Technologies I work with</p>
-                <div class="section-line"></div>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-category" data-animate="fadeInUp">
-                    <div class="skill-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Backend</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Ruby on Rails</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">Redis</span>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-animate="fadeInUp" data-delay="100">
-                    <div class="skill-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Frontend</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Next.js</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">Hotwire</span>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-animate="fadeInUp" data-delay="200">
-                    <div class="skill-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>DevOps & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Kamal</span>
-                        <span class="skill-tag">CI/CD</span>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-animate="fadeInUp" data-delay="300">
-                    <div class="skill-icon">
-                        <i class="fas fa-vial"></i>
-                    </div>
-                    <h3>Testing</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">RSpec</span>
-                        <span class="skill-tag">Jest</span>
-                        <span class="skill-tag">Capybara</span>
-                        <span class="skill-tag">Playwright</span>
-                        <span class="skill-tag">TDD</span>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header" data-animate="fadeInUp">
+          <h2 class="section-title">Tech Stack</h2>
+          <p class="section-subtitle">Technologies I work with</p>
+          <div class="section-line"></div>
         </div>
+
+        <div class="skills-grid">
+          <div class="skill-category" data-animate="fadeInUp">
+            <div class="skill-icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3>Backend</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Ruby on Rails</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Redis</span>
+            </div>
+          </div>
+
+          <div class="skill-category" data-animate="fadeInUp" data-delay="100">
+            <div class="skill-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3>Frontend</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Next.js</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">Hotwire</span>
+            </div>
+          </div>
+
+          <div class="skill-category" data-animate="fadeInUp" data-delay="200">
+            <div class="skill-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>DevOps & Tools</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Kamal</span>
+              <span class="skill-tag">CI/CD</span>
+            </div>
+          </div>
+
+          <div class="skill-category" data-animate="fadeInUp" data-delay="300">
+            <div class="skill-icon">
+              <i class="fas fa-vial"></i>
+            </div>
+            <h3>Testing</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">RSpec</span>
+              <span class="skill-tag">Jest</span>
+              <span class="skill-tag">Capybara</span>
+              <span class="skill-tag">Playwright</span>
+              <span class="skill-tag">TDD</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section bg-darker">
-        <div class="container">
-            <div class="section-header" data-animate="fadeInUp">
-                <h2 class="section-title">Let's Work Together</h2>
-                <p class="section-subtitle">Have a project in mind? Let's talk.</p>
-                <div class="section-line"></div>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-info" data-animate="fadeInLeft">
-                    <h3>Get in Touch</h3>
-                    <p>
-                        I'm always interested in hearing about new projects and opportunities. 
-                        The best way to reach me is through <strong>LinkedIn</strong> — send me a message there and I'll get back to you promptly!
-                    </p>
-                    <a href="https://www.linkedin.com/in/eliasecasta/" target="_blank" class="btn btn-primary" style="margin-bottom: 2rem;">
-                        <i class="fab fa-linkedin-in"></i> Connect on LinkedIn
-                    </a>
-                    
-                    <div class="contact-methods">
-                        <a href="https://www.linkedin.com/in/eliasecasta/" target="_blank" class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fab fa-linkedin-in"></i>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">LinkedIn</span>
-                                <span class="contact-value">/in/eliasecasta</span>
-                            </div>
-                        </a>
-                        
-                        <a href="https://github.com/eliasecasta" target="_blank" class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">GitHub</span>
-                                <span class="contact-value">/eliasecasta</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="contact-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Mexico</span>
-                    </div>
-                </div>
-
-                <div class="contact-form-wrapper" data-animate="fadeInRight">
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            <span class="focus-border"></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                            <span class="focus-border"></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                            <span class="focus-border"></span>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                            <span class="focus-border"></span>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">
-                            <span>Send Message</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header" data-animate="fadeInUp">
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="section-subtitle">Have a project in mind? Let's talk.</p>
+          <div class="section-line"></div>
         </div>
+
+        <div class="contact-grid">
+          <div class="contact-info" data-animate="fadeInLeft">
+            <h3>Get in Touch</h3>
+            <p>
+              I'm always interested in hearing about new projects and
+              opportunities. The best way to reach me is through
+              <strong>LinkedIn</strong> — send me a message there and I'll get
+              back to you promptly!
+            </p>
+            <a
+              href="https://www.linkedin.com/in/eliasecasta/"
+              target="_blank"
+              class="btn btn-primary"
+              style="margin-bottom: 2rem"
+            >
+              <i class="fab fa-linkedin-in"></i> Connect on LinkedIn
+            </a>
+
+            <div class="contact-methods">
+              <a
+                href="https://www.linkedin.com/in/eliasecasta/"
+                target="_blank"
+                class="contact-method"
+              >
+                <div class="contact-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">LinkedIn</span>
+                  <span class="contact-value">/in/eliasecasta</span>
+                </div>
+              </a>
+
+              <a
+                href="https://github.com/eliasecasta"
+                target="_blank"
+                class="contact-method"
+              >
+                <div class="contact-icon">
+                  <i class="fab fa-github"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">GitHub</span>
+                  <span class="contact-value">/eliasecasta</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="contact-location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Mexico</span>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper" data-animate="fadeInRight">
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+                <span class="focus-border"></span>
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+                <span class="focus-border"></span>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+                <span class="focus-border"></span>
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+                <span class="focus-border"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <span>Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-bracket">{</span>EC<span class="logo-bracket">}</span>
-                </div>
-                <div class="footer-social">
-                    <a href="https://github.com/eliasecasta" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/eliasecasta/" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Elías Castañeda. Crafted with passion and clean code.</p>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="logo-bracket">{</span>EC<span class="logo-bracket"
+              >}</span
+            >
+          </div>
+          <div class="footer-social">
+            <a
+              href="https://github.com/eliasecasta"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/eliasecasta/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Elías Castañeda. Crafted with passion and clean code.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <!-- Scripts -->
     <script src="js/neon-portfolio.js"></script>
-</body>
+  </body>
 </html>
