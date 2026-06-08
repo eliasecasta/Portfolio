@@ -307,23 +307,31 @@ function initContactForm() {
     
     // Collect form data
     const formData = new FormData(form);
-    const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      subject: formData.get('subject'),
-      message: formData.get('message')
-    };
     
     try {
-      // Here you would typically send to your backend or email service
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Submit to Formspree via AJAX
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
       
-      // Show success message
-      showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-      form.reset();
+      if (response.ok) {
+        // Show success message
+        showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+        form.reset();
+      } else {
+        const data = await response.json();
+        if (data.errors) {
+          showNotification(data.errors.map(e => e.message).join(', '), 'error');
+        } else {
+          showNotification('Something went wrong. Please try again or contact me via LinkedIn.', 'error');
+        }
+      }
     } catch (error) {
-      showNotification('Something went wrong. Please try again or email me directly.', 'error');
+      showNotification('Network error. Please try again or contact me via LinkedIn.', 'error');
     } finally {
       // Restore button
       submitBtn.innerHTML = originalText;
