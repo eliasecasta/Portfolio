@@ -65,7 +65,7 @@ Portfolio/
 
 ## 📄 License
 
-© 2025 Elías Castañeda. All rights reserved.
+© 2026 Elías Castañeda. All rights reserved.
 
 ---
 
