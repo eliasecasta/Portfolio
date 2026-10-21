@@ -1,72 +1,43 @@
-# Elías Castañeda - Portfolio
+# Elías Castañeda — Full-Stack Product Engineer
 
-Full Stack Developer specializing in Ruby on Rails, React, and modern web technologies. Based in Mexico.
+**AI-native software delivery, with engineering accountability.**
 
-## 🌐 Live Site
+Personal engineering portfolio: **https://eliasecasta.github.io/Portfolio/**
 
-Visit my portfolio: [https://eliasecasta.github.io/Portfolio/](https://eliasecasta.github.io/Portfolio/)
+## Purpose
 
-## ✨ Features
+This portfolio highlights production client work and the technical practices behind reliable delivery, not an inflated project count or a collection of technology badges.
 
-- **Futuristic Neon Theme**: Elegant black design with cyan neon accents and glass-morphism effects
-- **Animated Background**: Interactive particle.js network that responds to mouse movement
-- **Typewriter Effect**: Dynamic role cycling in the hero section
-- **Smooth Animations**: Scroll-triggered fade-in animations throughout
-- **Responsive Design**: Fully mobile-optimized with hamburger menu
-- **Project Showcase**: 7 featured projects including live sites and private work
-- **Contact Form**: Modern form with validation and success notifications
+Featured systems:
 
-## 🛠️ Tech Stack
+- **[Umbala](https://umbala.com.mx/)** — Wellness platform: member access, booking/credits, payment integration, admin operations. React/Vite + Express/Node.js + PocketBase; deployed with Docker on DigitalOcean.
+- **[FIS Certificaciones](https://fiscertificaciones.com.mx/)** — Custom Next.js/TypeScript LMS built to replace legacy WordPress/Masteriyo, including course authoring, quizzes, certificates, permissions, enrollment and migration/release tooling.
+- Additional work: Global Metal Buildings and Riven ROI.
 
-- **HTML5** - Semantic markup
-- **CSS3** - Custom properties, animations, glass-morphism
-- **JavaScript (ES6+)** - Vanilla JS, no frameworks
-- **Particles.js** - Animated background
-- **Font Awesome** - Icons
-- **Google Fonts** - Inter + JetBrains Mono
+## AI-assisted engineering position
 
-## 📁 Project Structure
+AI coding agents are used to accelerate scoped implementation, research and testing; architecture, acceptance criteria, code review, automated verification and release responsibility remain human-led.
 
-```
-Portfolio/
-├── index.html              # Main HTML file
-├── css/
-│   └── neon-theme.css     # Complete stylesheet
-├── js/
-│   └── neon-portfolio.js  # Interactive features
-├── img/
-│   └── projects/          # Project screenshots
-└── README.md
-```
+## Site details
 
-## 🚀 Featured Projects
+- Static, semantic HTML with responsive, in-document CSS and a small vanilla JavaScript navigation controller.
+- Uses local screenshots under `img/projects/`; no third-party animation or icon framework is required.
+- No contact form collecting visitor data; contact links launch mail or open LinkedIn.
+- Project codebases are private. This site publishes only high-level narratives and screenshots of already-public sites, not source or client data.
+- Screenshots may reflect a previous product UI iteration. Live project links are the source for the current public interface.
 
-### Live Sites
-- **Riven ROI** - Warframe analytics dashboard ([Live Demo](https://riven-roi.vercel.app/))
-- **Umbala Gym** - Full-stack fitness platform ([Live Site](https://umbala.com.mx/))
-- **FIS Certificaciones** - Professional certification platform ([Live Site](https://fiscertificaciones.com.mx/))
+## Local preview
 
-### Private/Client Work
-- **AbiLoadoutAI** - Rails 8 + OpenAI gaming loadout generator
-- **The Hive Discord Bot** - Ruby bot for V Rising community
-- **V Rising API** - RESTful API with Redis caching
-- **Mercado Digital** - E-commerce platform with Rails 8
+Open `index.html` in a browser, or run `python -m http.server 8000` from the repository root and navigate to `http://localhost:8000`.
 
-## 📊 Stats
+## Hosting
 
-- **4+** Years Experience
-- **50+** Projects Delivered
-- **500+** Developers Mentored
+GitHub Pages serves this repository from the `gh-pages` branch. Review changes on a feature branch and merge after validation.
 
-## 🔗 Connect
+## Contact
 
-- **LinkedIn**: [/in/eliasecasta](https://www.linkedin.com/in/eliasecasta/)
-- **GitHub**: [/eliasecasta](https://github.com/eliasecasta)
+- [GitHub](https://github.com/eliasecasta)
+- [LinkedIn](https://www.linkedin.com/in/eliasecasta/)
+- [Email](mailto:e71az@icloud.com)
 
-## 📄 License
-
-© 2026 Elías Castañeda. All rights reserved.
-
----
-
-Crafted with passion and clean code.
+© 2026 Elías Castañeda.
