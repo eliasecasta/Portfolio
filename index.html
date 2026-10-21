@@ -1,794 +1,340 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elías Castañeda | Full Stack Developer</title>
-    <meta
-      name="description"
-      content="Full Stack Web Developer specializing in Ruby on Rails, React, and modern web technologies. Based in Mexico."
-    />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/favicon.png" />
-    <link rel="apple-touch-icon" href="img/favicon.png" />
-
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <!-- Particles.js for animated background -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/neon-theme.css" />
-  </head>
-  <body>
-    <!-- Animated Background -->
-    <div id="particles-js"></div>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="#home" class="nav-logo">
-          <span class="logo-bracket">{</span>EC<span class="logo-bracket"
-            >}</span
-          >
-        </a>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="#home" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#about" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="#projects" class="nav-link">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a href="#skills" class="nav-link">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link">Contact</a>
-          </li>
-        </ul>
-        <div class="nav-social">
-          <a
-            href="https://github.com/eliasecasta"
-            target="_blank"
-            aria-label="GitHub"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/eliasecasta/"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-        <button class="hamburger" aria-label="Toggle menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-      </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0e141b" />
+  <meta name="description" content="Elías Castañeda is a full-stack product engineer delivering real client software with React, Next.js, Node.js and AI-assisted engineering workflows." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Elías Castañeda — Full-Stack Product Engineer" />
+  <meta property="og:description" content="Production software. Real clients. AI-assisted delivery with engineering accountability." />
+  <meta property="og:image" content="https://eliasecasta.github.io/Portfolio/img/projects/umbala.png" />
+  <meta property="og:url" content="https://eliasecasta.github.io/Portfolio/" />
+  <link rel="canonical" href="https://eliasecasta.github.io/Portfolio/" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <title>Elías Castañeda — Full-Stack Product Engineer</title>
+  <style>
+    :root { --ink:#111922; --dim:#596471; --dark:#0e141b; --soft:#f5f7f9; --paper:#ffffff; --line:#dbe0e5; --blue:#5c9dff; --radius:16px; }
+    *,*::before,*::after { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:88px; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:400 16px/1.65 "DM Sans",sans-serif; }
+    h1,h2,h3,h4,.logo,.display,.eyebrow,.tag,.btn { font-family:"Space Grotesk",sans-serif; }
+    h1,h2,h3,h4,p { margin-top:0; }
+    a { color:inherit; }
+    img { display:block; max-width:100%; }
+    button,input { font:inherit; }
+    .skip-link { position:absolute; left:12px; top:-90px; background:#fff; padding:12px; z-index:99; }
+    .skip-link:focus { top:12px; }
+    :focus-visible { outline:3px solid #2e75da; outline-offset:4px; }
+    .container { width:min(1160px, calc(100% - 48px)); margin-inline:auto; }
+    .topbar { position:sticky; top:0; z-index:50; background:#0e141bf0; color:#f7f9fa; border-bottom:1px solid #ffffff25; backdrop-filter:blur(16px); }
+    .nav { display:flex; align-items:center; gap:30px; min-height:76px; }
+    .logo { text-decoration:none; font-size:24px; font-weight:700; letter-spacing:-.09em; margin-right:auto; }
+    .logo span { color:#81adff; padding-inline:4px; }
+    .navlinks { display:flex; list-style:none; gap:30px; margin:0; padding:0; }
+    .navlinks a { font-size:14px; font-weight:600; text-decoration:none; color:#e2e8ee; transition:color .2s; }
+    .navlinks a:hover { color:#81adff; }
+    .nav-cta { font-size:13px; font-weight:700; text-decoration:none; padding:10px 15px; border:1px solid #9aaec4; border-radius:8px; white-space:nowrap; }
+    .nav-cta:hover { background:#edf3ff; color:#121c28; }
+    .menu-btn { display:none; background:transparent; border:1px solid #8b9aa9; border-radius:8px; color:white; padding:7px 11px; cursor:pointer; }
+    .hero { color:#f4f7fa; background:var(--dark); position:relative; overflow:hidden; }
+    .hero::before { content:""; position:absolute; right:-10%; top:-42%; width:60%; height:150%; border:1px solid #ffffff14; border-radius:50%; pointer-events:none; }
+    .hero-inner { display:grid; grid-template-columns:1.15fr .85fr; min-height:610px; align-items:center; gap:80px; padding:100px 0 108px; }
+    .eyebrow { font-size:12px; letter-spacing:.16em; font-weight:700; text-transform:uppercase; }
+    .hero .eyebrow { color:#8db8ff; }
+    .hero h1 { font-size:clamp(52px,7vw,94px); letter-spacing:-.075em; line-height:1.02; max-width:730px; margin:22px 0 24px; font-weight:600; }
+    .hero h1 em { font-style:normal; color:#83aeff; }
+    .hero-copy { font-size:18px; color:#bcc7d1; max-width:600px; line-height:1.72; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:32px; }
+    .btn { border-radius:8px; display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:13px 20px; font-weight:700; font-size:14px; text-decoration:none; transition:transform .2s,background .2s; }
+    .btn:hover { transform:translateY(-2px); }
+    .btn-primary { background:#80aeff; color:#111c29; }
+    .btn-primary:hover { background:#b5d0ff; }
+    .btn-outline { border:1px solid #53677e; color:#f7faff; }
+    .btn-outline:hover { background:#ffffff16; }
+    .signal { background:#15212d; border:1px solid #34465a; border-radius:16px; overflow:hidden; box-shadow:0 26px 80px #0000004b; transform:rotate(1.5deg); }
+    .signal-head { display:flex; align-items:center; gap:6px; border-bottom:1px solid #34465a; padding:15px 19px; font:600 11px "Space Grotesk",sans-serif; color:#b2c2d3; letter-spacing:.08em; }
+    .dot { width:8px;height:8px;border:1px solid #64809f;border-radius:50%; }
+    .signal-head strong { margin-left:auto; font-weight:500; }
+    .signal-body { padding:26px 26px 22px; }
+    .signal-label { color:#96acc1;font-size:12px;text-transform:uppercase;letter-spacing:.12em; }
+    .signal-title { font:600 27px/1.25 "Space Grotesk",sans-serif; letter-spacing:-.04em; margin:7px 0 21px; }
+    .step { display:flex; gap:15px; align-items:center; padding:11px 0; border-top:1px solid #ffffff12; color:#e6eef7;font-size:13px; }
+    .step span { font:600 11px "Space Grotesk",sans-serif; color:#91b6e4; }
+    .step b { margin-left:auto; color:#7dcbac; font-weight:600; font-size:11px; }
+    .signal-foot { background:#101a24; color:#9cb4cc; font:500 11px "Space Grotesk",sans-serif; padding:13px 26px; }
+    .statement { border-bottom:1px solid var(--line); background:#f9fafb; }
+    .statement-inner { padding:24px 0; display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; }
+    .statement p { margin:0; font:600 14px "Space Grotesk",sans-serif; }
+    .statement p span { color:#6c7886; font-weight:400; }
+    .statement a { font-size:13px; font-weight:700; color:#245caa; text-decoration:none; }
+    section.content { padding:100px 0; }
+    .section-intro { display:flex; align-items:end; justify-content:space-between; gap:35px; margin-bottom:42px; }
+    .section-intro h2,.section-title { font-size:clamp(36px,4.8vw,56px); letter-spacing:-.063em; line-height:1.13; font-weight:600; margin:8px 0 0; }
+    .section-intro p { color:var(--dim); max-width:410px; margin:0; }
+    .work { display:grid; gap:24px; }
+    .work-card { border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:#fff; display:grid; grid-template-columns:1fr 1fr; box-shadow:0 10px 35px #0d192708; }
+    .work-card img { height:100%; min-height:375px; width:100%; object-fit:cover; object-position:center top; }
+    .work-card .info { padding:45px; display:flex; flex-direction:column; }
+    .kicker { color:#5378a6; text-transform:uppercase; letter-spacing:.13em; font:700 11px "Space Grotesk",sans-serif; }
+    .work-card h3 { font:600 clamp(30px,3.3vw,43px)/1.12 "Space Grotesk",sans-serif; letter-spacing:-.06em; margin:15px 0 15px; }
+    .work-card p { color:var(--dim); margin-bottom:23px; }
+    .tags { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:27px; }
+    .tags span { font:600 11px "Space Grotesk",sans-serif; color:#374b61; padding:5px 8px; background:#eef2f6; border-radius:5px; }
+    .case-actions { display:flex; gap:16px; flex-wrap:wrap; margin-top:auto; }
+    .link { font:700 13px "Space Grotesk",sans-serif; color:#1556a1; text-decoration:none; border-bottom:1px solid #a8bed8; padding-bottom:3px; }
+    .link:hover { color:#092847;border-color:currentColor; }
+    details.case-detail { margin:0; background:#f5f7f9; border-top:1px solid var(--line); grid-column:1/-1; }
+    .case-detail summary { padding:16px 27px; cursor:pointer; font:600 13px "Space Grotesk",sans-serif; color:#243d58; }
+    .case-detail[open] summary { border-bottom:1px solid var(--line); }
+    .case-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:26px; padding:29px; }
+    .case-grid h4 { font:700 12px "Space Grotesk",sans-serif; text-transform:uppercase; letter-spacing:.1em; }
+    .case-grid p { font-size:14px; line-height:1.7; margin:9px 0 0; color:#4d5b6c; }
+    .minor-work { display:grid;grid-template-columns:repeat(2,1fr); gap:24px; margin-top:24px; }
+    .minor-card { border-radius:14px; border:1px solid var(--line); display:flex; overflow:hidden; background:#fff; align-items:stretch; }
+    .minor-card img { width:42%; aspect-ratio:4 / 3; object-fit:cover; }
+    .minor-card div { padding:25px; }
+    .minor-card h3 { font:600 20px "Space Grotesk",sans-serif;letter-spacing:-.04em;margin-bottom:8px; }
+    .minor-card p { font-size:13px;color:var(--dim);margin-bottom:12px; }
+    .approach { background:#f3f6f9; }
+    .approach-grid { display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start; }
+    .approach-intro { position:sticky; top:112px; }
+    .approach-intro p { color:#536071; max-width:510px; margin-top:20px; }
+    .workflow { border-left:2px solid #b7cce5; margin-left:11px; padding-left:28px; display:grid;gap:11px; }
+    .workflow article { position:relative; border:1px solid #dae4ee;border-radius:10px;padding:17px 21px;background:#fff; }
+    .workflow article::before { position:absolute;content:""; width:12px;height:12px; border-radius:50%; background:#3479cd;box-shadow:0 0 0 5px #e0ebf8;left:-35px;top:25px; }
+    .workflow h3 { font-size:16px; letter-spacing:-.03em; margin-bottom:5px; }
+    .workflow p { color:#627080; font-size:13px; line-height:1.55; margin:0; }
+    .capabilities-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:18px; }
+    .capability { padding:28px 24px; border:1px solid var(--line); border-radius:12px; }
+    .capability .index { font:600 12px "Space Grotesk",sans-serif; color:#367ac5; }
+    .capability h3 { font-size:20px;line-height:1.3;letter-spacing:-.04em;margin:15px 0 10px; }
+    .capability p { margin:0; color:var(--dim);font-size:14px; }
+    .background { padding:78px 0;border-top:1px solid var(--line); }
+    .background-grid { display:grid;grid-template-columns:1fr 1fr;gap:70px; }
+    .background p { color:var(--dim); }
+    .timeline { display:grid;gap:19px; }
+    .timeline article { border-bottom:1px solid var(--line);padding-bottom:17px; }
+    .timeline .when { font:600 12px "Space Grotesk",sans-serif;color:#4778ac; }
+    .timeline h3 {font-size:18px; margin:5px 0;letter-spacing:-.04em;}
+    .timeline p {font-size:13px;margin:0;}
+    .contact { background:#0e141b; color:#f7fafd; }
+    .contact-inner { padding:90px 0; display:flex; align-items:end;justify-content:space-between;gap:28px; }
+    .contact h2 { font:600 clamp(42px,6vw,72px)/1.06 "Space Grotesk",sans-serif;letter-spacing:-.07em;margin:10px 0 18px;max-width:680px; }
+    .contact p { color:#b5c3d3;max-width:600px; }
+    .footer { background:#0b1016;color:#bac8d4;border-top:1px solid #ffffff1b; }
+    .footer-inner { display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:25px 0;font-size:13px; }
+    .footer a { text-decoration:none; margin-left:17px; }
+    .footer a:hover {color:#8cb8fb;}
+    @media(max-width:960px){
+      .hero-inner,.approach-grid {gap:34px;}
+      .hero-inner { min-height:530px; }
+      .signal-title {font-size:22px;}
+      .work-card .info {padding:30px;}
+      .case-grid {grid-template-columns:1fr;gap:12px;}
+      .capabilities-grid {grid-template-columns:repeat(2,1fr);}
+    }
+    @media(max-width:720px){
+      .container {width:min(100% - 32px, 1160px);}
+      .nav {min-height:68px;gap:10px;}
+      .nav-cta {margin-left:auto;}
+      .menu-btn {display:block;}
+      .navlinks {display:none;position:absolute;left:0;right:0;top:68px;background:#111c28;padding:20px 24px;flex-direction:column;gap:15px;border-bottom:1px solid #ffffff30;}
+      .navlinks.open {display:flex;}
+      .hero-inner {grid-template-columns:1fr;padding:80px 0 72px;}
+      .hero::before {display:none;}
+      .hero h1 {font-size:clamp(48px,12vw,68px);}
+      .hero-copy {font-size:16px;}
+      .signal {max-width:520px;transform:none;}
+      section.content {padding:70px 0;}
+      .section-intro,.contact-inner {display:block;}
+      .section-intro p {margin-top:18px;}
+      .work-card {grid-template-columns:1fr;}
+      .work-card img {min-height:0; height:260px;}
+      .work-card .info {padding:27px;}
+      .minor-work,.approach-grid,.capabilities-grid,.background-grid {grid-template-columns:1fr;gap:16px;}
+      .minor-card img {width:39%;}
+      .approach-intro {position:static;margin-bottom:27px;}
+      .workflow {margin-left:7px;}
+      .contact-inner {padding:70px 0;}
+      .contact .actions {margin-top:25px;}
+      .footer-inner {flex-direction:column;align-items:flex-start;}
+      .footer a {margin:0 15px 0 0;}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#top" aria-label="Elías Castañeda home"><span>{</span>EC<span>}</span></a>
+      <ul class="navlinks" id="navlinks">
+        <li><a href="#work">Selected work</a></li>
+        <li><a href="#approach">How I build</a></li>
+        <li><a href="#skills">Capabilities</a></li>
+        <li><a href="#background">Background</a></li>
+      </ul>
+      <a class="nav-cta" href="#contact">Let's connect ↗</a>
+      <button class="menu-btn" id="menu-button" type="button" aria-controls="navlinks" aria-expanded="false" aria-label="Toggle menu">☰</button>
     </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <div class="hero-text" data-animate="fadeInUp">
-          <h1 class="hero-title">
-            <span class="greeting">Hello, I'm</span>
-            <span class="name">Elías Castañeda</span>
-          </h1>
-          <div class="typewriter">
-            <span class="typewriter-text"></span>
-            <span class="cursor">|</span>
-          </div>
-          <p class="hero-description">
-            Full Stack Developer crafting elegant, high-performance web
-            applications with modern technologies and clean architecture.
-          </p>
-          <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">View My Work</a>
-            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+  </header>
+  <main id="main">
+    <div id="top" class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="eyebrow">Elías Castañeda / Full-Stack Product Engineer</div>
+          <h1>Software built to ship.<br><em>And built to last.</em></h1>
+          <p class="hero-copy">I turn real business requirements into working web products. From architecture and development to testing, deployment and production operations — accelerated by AI coding agents, accountable to engineering standards.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#work">Explore client work <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/eliasecasta/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
           </div>
         </div>
-        <div class="hero-visual" data-animate="fadeInRight">
-          <div class="code-window">
-            <div class="code-header">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-            <div class="code-content">
-              <code>
-                <span class="code-comment">// Building the future</span>
-                <span class="code-keyword">const</span>
-                <span class="code-variable">developer</span> = {
-                <span class="code-key">name</span>:
-                <span class="code-string">'Elías Castañeda'</span>,
-                <span class="code-key">role</span>:
-                <span class="code-string">'Full Stack Developer'</span>,
-                <span class="code-key">stack</span>: [<span class="code-string"
-                  >'Rails'</span
-                >, <span class="code-string">'React'</span>,
-                <span class="code-string">'Next.js'</span>],
-                <span class="code-key">passion</span>:
-                <span class="code-string">'Clean Code'</span>
-                };
-              </code>
-            </div>
+        <div class="signal" aria-label="Software delivery workflow">
+          <div class="signal-head"><i class="dot"></i><i class="dot"></i><i class="dot"></i><strong>delivery.workflow</strong></div>
+          <div class="signal-body">
+            <div class="signal-label">Engineering, not just generation</div>
+            <div class="signal-title">From idea to reliable release.</div>
+            <div class="step"><span>01</span> Define product and acceptance criteria <b>✓</b></div>
+            <div class="step"><span>02</span> Establish architecture and context <b>✓</b></div>
+            <div class="step"><span>03</span> Implement with AI coding agents <b>✓</b></div>
+            <div class="step"><span>04</span> Verify through tests and reviews <b>✓</b></div>
+            <div class="step"><span>05</span> Deploy, observe and iterate <b>✓</b></div>
           </div>
+          <div class="signal-foot">HUMAN ACCOUNTABILITY / EVERY RELEASE</div>
         </div>
       </div>
-      <div class="scroll-indicator" data-animate="fadeIn" data-delay="1000">
-        <span>Scroll to explore</span>
-        <div class="scroll-arrow"></div>
+    </div>
+    <div class="statement">
+      <div class="container statement-inner">
+        <p>Real clients. Production systems. <span>Remote collaboration across US and European time zones.</span></p>
+        <a href="#approach">See my process ↗</a>
       </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
+    </div>
+    <section class="content" id="work" aria-labelledby="work-title">
       <div class="container">
-        <div class="section-header" data-animate="fadeInUp">
-          <h2 class="section-title">About Me</h2>
-          <div class="section-line"></div>
+        <div class="section-intro">
+          <div><div class="kicker">01 / Selected work</div><h2 id="work-title">Evidence of delivery.</h2></div>
+          <p>Not hypothetical apps — real-world client engagements that require product thinking, implementation and ongoing technical ownership.</p>
         </div>
-
-        <div class="about-grid">
-          <div class="about-text" data-animate="fadeInLeft">
-            <h3>Full Stack Developer & IT Engineer</h3>
-            <p>
-              With over 4 years of experience in software development, I
-              specialize in building scalable web applications that combine
-              beautiful interfaces with robust backend systems. My journey
-              includes mentoring 500+ developers and reviewing 1,500+ code
-              projects at Microverse.
-            </p>
-            <p>
-              Currently working as a freelance developer, I help businesses
-              transform their ideas into production-ready applications using
-              modern technologies like Ruby on Rails, React, and Next.js.
-            </p>
-
-            <div class="about-stats">
-              <div class="stat-item">
-                <div class="stat-number">4+</div>
-                <div class="stat-label">Years Experience</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Projects Delivered</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Developers Mentored</div>
-              </div>
+        <div class="work">
+          <article class="work-card">
+            <img src="img/projects/umbala.png" alt="Umbala wellness platform interface" loading="lazy" />
+            <div class="info">
+              <div class="kicker">Client platform / live website</div>
+              <h3>Umbala</h3>
+              <p>A wellness studio platform combining a public brand experience with member accounts, class scheduling, credit-based reservations, payment flows and back-office operations.</p>
+              <div class="tags"><span>React + Vite</span><span>Node.js / Express</span><span>PocketBase</span><span>Docker</span><span>DigitalOcean</span></div>
+              <div class="case-actions"><a class="link" href="https://umbala.com.mx/" target="_blank" rel="noopener noreferrer">Visit live website ↗</a></div>
             </div>
-          </div>
-
-          <div class="about-visual" data-animate="fadeInRight">
-            <div class="experience-card">
-              <div class="card-icon">
-                <i class="fas fa-rocket"></i>
+            <details class="case-detail">
+              <summary>Engineering case study — architecture, ownership &amp; delivery +</summary>
+              <div class="case-grid">
+                <div><h4>Problem</h4><p>Give a growing studio a responsive customer experience and a single place to manage bookings, credits and day-to-day operations.</p></div>
+                <div><h4>My ownership</h4><p>Full-stack engineering from data model and API integration to release workflows, environment separation and ongoing production support.</p></div>
+                <div><h4>Reliability</h4><p>Risk-based acceptance gates, automated API/web tests, browser E2E coverage, secrets management, monitoring and rollback-oriented documentation. Private client code is not published.</p></div>
               </div>
-              <h4>Current Focus</h4>
-              <ul>
-                <li>AI-enhanced web applications</li>
-                <li>Real-time features with WebSockets</li>
-                <li>Performance optimization</li>
-                <li>Modern DevOps practices</li>
-              </ul>
+            </details>
+          </article>
+          <article class="work-card">
+            <img src="img/projects/fiscertificaciones.png" alt="FIS Certificaciones learning platform interface" loading="lazy" />
+            <div class="info">
+              <div class="kicker">Learning management system / live website</div>
+              <h3>FIS Certificaciones</h3>
+              <p>Rebuilding a legacy WordPress/Masteriyo experience as a code-owned learning platform, with courses, learning flows, quizzes, certificates, role-based administration and commerce workflows.</p>
+              <div class="tags"><span>Next.js</span><span>TypeScript</span><span>PocketBase</span><span>Migration tooling</span><span>Playwright</span></div>
+              <div class="case-actions"><a class="link" href="https://fiscertificaciones.com.mx/" target="_blank" rel="noopener noreferrer">Visit live website ↗</a></div>
             </div>
-          </div>
+            <details class="case-detail">
+              <summary>Engineering case study — modernization, migration &amp; quality +</summary>
+              <div class="case-grid">
+                <div><h4>Problem</h4><p>Move beyond dependency-heavy LMS plugins without disrupting essential course access and administration.</p></div>
+                <div><h4>My ownership</h4><p>Application implementation, role-aware workflows, content/migration architecture, test strategy and deployment process for the new platform.</p></div>
+                <div><h4>Verification</h4><p>Lint, type checks, automated tests, browser flows and migration runbooks. Some provider-specific live-payment and recovery acceptance evidence remains separate from the public site.</p></div>
+              </div>
+            </details>
+          </article>
+        </div>
+        <div class="minor-work">
+          <article class="minor-card">
+            <img src="img/projects/globalmetalbuildings.png" alt="Global Metal Buildings website" loading="lazy" />
+            <div><div class="kicker">Web presence</div><h3>Global Metal Buildings</h3><p>Responsive service presentation and lead-generation website for a construction business.</p><a class="link" href="https://www.gmetalbuildings.com/" target="_blank" rel="noopener noreferrer">View website ↗</a></div>
+          </article>
+          <article class="minor-card">
+            <img src="img/projects/riven-roi.png" alt="Riven ROI analytics application" loading="lazy" />
+            <div><div class="kicker">Independent product</div><h3>Riven ROI</h3><p>Data-driven game-market analytics and interface experimentation with Next.js and TypeScript.</p><a class="link" href="https://riven-roi.vercel.app/" target="_blank" rel="noopener noreferrer">View project ↗</a></div>
+          </article>
         </div>
       </div>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section bg-darker">
-      <div class="container">
-        <div class="section-header" data-animate="fadeInUp">
-          <h2 class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">A selection of my recent work</p>
-          <div class="section-line"></div>
+    <section class="content approach" id="approach" aria-labelledby="approach-title">
+      <div class="container approach-grid">
+        <div class="approach-intro">
+          <div class="kicker">02 / AI-assisted engineering</div>
+          <h2 id="approach-title" class="section-title">AI accelerates the work.<br>Standards make it reliable.</h2>
+          <p>I use coding agents to speed up implementation, exploration and test-writing — not to outsource responsibility. I define requirements, review architecture, maintain clear boundaries and verify outputs before a release is considered complete.</p>
+          <p>Working software is the deliverable. Readable, testable and maintainable engineering is the method.</p>
         </div>
-
-        <div class="projects-grid">
-          <!-- Project 1: Umbala Gym -->
-          <div class="project-card" data-animate="fadeInUp">
-            <div class="project-image">
-              <img src="img/projects/umbala.png?v=2" alt="Umbala Gym Website" />
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a
-                    href="https://umbala.com.mx/"
-                    target="_blank"
-                    class="project-link"
-                  >
-                    <i class="fas fa-external-link-alt"></i>
-                    <span>Live Site</span>
-                  </a>
-                </div>
-              </div>
-              <div class="project-badge">
-                <i class="fas fa-lock"></i>
-                <span>Client Work</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="tag">React</span>
-                <span class="tag">Rails API</span>
-                <span class="tag">PostgreSQL</span>
-              </div>
-              <h3 class="project-title">Umbala Gym</h3>
-              <p class="project-description">
-                Full-stack fitness platform with class scheduling, membership
-                management, and real-time booking system for a local gym.
-              </p>
-              <div class="project-features">
-                <span
-                  ><i class="fas fa-calendar-check"></i> Booking system</span
-                >
-                <span><i class="fas fa-mobile-alt"></i> Responsive design</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2: FIS Certificaciones -->
-          <div class="project-card" data-animate="fadeInUp" data-delay="100">
-            <div class="project-image">
-              <img
-                src="img/projects/fiscertificaciones.png?v=2"
-                alt="FIS Certificaciones Platform"
-              />
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a
-                    href="https://fiscertificaciones.com.mx/"
-                    target="_blank"
-                    class="project-link"
-                  >
-                    <i class="fas fa-external-link-alt"></i>
-                    <span>Live Site</span>
-                  </a>
-                </div>
-              </div>
-              <div class="project-badge">
-                <i class="fas fa-lock"></i>
-                <span>Client Work</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="tag">WordPress</span>
-                <span class="tag">Custom Theme</span>
-                <span class="tag">PHP</span>
-              </div>
-              <h3 class="project-title">FIS Certificaciones</h3>
-              <p class="project-description">
-                Professional certification platform for physiotherapy courses
-                with student management, certificate verification, and payment
-                integration.
-              </p>
-              <div class="project-features">
-                <span
-                  ><i class="fas fa-certificate"></i> Certificate system</span
-                >
-                <span><i class="fas fa-users"></i> Student portal</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3: ArchiSite AI -->
-          <div class="project-card" data-animate="fadeInUp" data-delay="200">
-            <div class="project-image">
-              <img
-                src="img/projects/site-analysis.png?v=2"
-                alt="Site Analysis Dashboard"
-              />
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a
-                    href="https://site-analysis-one.vercel.app/"
-                    target="_blank"
-                    class="project-link"
-                  >
-                    <i class="fas fa-external-link-alt"></i>
-                    <span>Live Demo</span>
-                  </a>
-                </div>
-              </div>
-              <div class="project-badge">
-                <i class="fas fa-lock"></i>
-                <span>Client Work</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="tag">FastAPI</span>
-                <span class="tag">Leaflet.js</span>
-                <span class="tag">Python</span>
-              </div>
-              <h3 class="project-title">ArchiSite AI</h3>
-              <p class="project-description">
-                Professional architectural site analysis tool generating
-                technical sheets from geographic coordinates. Features 11
-                analysis modules powered by real geospatial APIs.
-              </p>
-              <div class="project-features">
-                <span
-                  ><i class="fas fa-map-marked-alt"></i> 11 analysis
-                  modules</span
-                >
-                <span><i class="fas fa-file-pdf"></i> Export to PNG/PDF</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 4: Riven ROI -->
-          <div class="project-card" data-animate="fadeInUp" data-delay="300">
-            <div class="project-image">
-              <img
-                src="img/projects/riven-roi.png?v=2"
-                alt="Riven ROI Dashboard"
-              />
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a
-                    href="https://riven-roi.vercel.app/"
-                    target="_blank"
-                    class="project-link"
-                  >
-                    <i class="fas fa-external-link-alt"></i>
-                    <span>Live Demo</span>
-                  </a>
-                </div>
-              </div>
-              <div class="project-badge">
-                <i class="fas fa-lock"></i>
-                <span>Private Project</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="tag">Next.js</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">Tailwind</span>
-              </div>
-              <h3 class="project-title">Riven ROI</h3>
-              <p class="project-description">
-                Advanced Warframe analytics dashboard tracking market trends,
-                pricing volatility, and trading opportunities for Riven mods.
-              </p>
-              <div class="project-features">
-                <span
-                  ><i class="fas fa-chart-line"></i> Real-time analytics</span
-                >
-                <span><i class="fas fa-database"></i> Market data API</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 5: Global Metal Buildings -->
-          <div class="project-card" data-animate="fadeInUp" data-delay="400">
-            <div class="project-image">
-              <img
-                src="img/projects/globalmetalbuildings.png?v=2"
-                alt="Global Metal Buildings Website"
-              />
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a
-                    href="https://www.gmetalbuildings.com/"
-                    target="_blank"
-                    class="project-link"
-                  >
-                    <i class="fas fa-external-link-alt"></i>
-                    <span>Live Site</span>
-                  </a>
-                </div>
-              </div>
-              <div class="project-badge">
-                <i class="fas fa-lock"></i>
-                <span>Client Work</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="tag">Bootstrap</span>
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
-              </div>
-              <h3 class="project-title">Global Metal Buildings</h3>
-              <p class="project-description">
-                Corporate website for a metal building construction company
-                featuring project galleries with lightbox, service showcase,
-                quote request forms, and SEO optimization.
-              </p>
-              <div class="project-features">
-                <span><i class="fas fa-images"></i> Project gallery</span>
-                <span><i class="fas fa-file-contract"></i> Quote forms</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 6: AbiLoadoutAI -->
-          <div class="project-card" data-animate="fadeInUp" data-delay="500">
-            <div class="project-image">
-              <img
-                src="img/projects/abiloadoutai.png?v=2"
-                alt="AbiLoadoutAI Interface"
-              />
-              <div class="project-badge">
-                <i class="fas fa-lock"></i>
-                <span>Private Project</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="tag">Rails 8</span>
-                <span class="tag">OpenAI</span>
-                <span class="tag">Hotwire</span>
-              </div>
-              <h3 class="project-title">AbiLoadoutAI</h3>
-              <p class="project-description">
-                Full-stack Rails 8 platform with OpenAI integration that
-                generates optimized gaming loadouts. Features JWT auth, Sidekiq
-                background jobs, and a Hotwire-powered reactive UI.
-              </p>
-              <div class="project-features">
-                <span><i class="fas fa-robot"></i> OpenAI integration</span>
-                <span><i class="fas fa-bolt"></i> Sidekiq + Redis</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 7: Mercado Digital -->
-          <div class="project-card" data-animate="fadeInUp" data-delay="600">
-            <div class="project-image">
-              <div class="placeholder-image">
-                <i class="fas fa-shopping-cart"></i>
-                <span>E-commerce</span>
-              </div>
-              <div class="project-badge">
-                <i class="fas fa-lock"></i>
-                <span>Client Work</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="tag">Rails 8</span>
-                <span class="tag">Hotwire</span>
-                <span class="tag">Docker</span>
-              </div>
-              <h3 class="project-title">Mercado Digital</h3>
-              <p class="project-description">
-                Complete e-commerce platform with product management, shopping
-                cart, payment integration, and admin dashboard.
-              </p>
-              <div class="project-features">
-                <span><i class="fas fa-credit-card"></i> Payment system</span>
-                <span><i class="fas fa-box"></i> Inventory management</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 8: The Hive Discord Bot -->
-          <div class="project-card" data-animate="fadeInUp" data-delay="700">
-            <div class="project-image">
-              <div class="placeholder-image">
-                <i class="fab fa-discord"></i>
-                <span>Discord Bot</span>
-              </div>
-              <div class="project-badge">
-                <i class="fas fa-lock"></i>
-                <span>Private Project</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="tag">Ruby</span>
-                <span class="tag">Discord API</span>
-                <span class="tag">PostgreSQL</span>
-              </div>
-              <h3 class="project-title">The Hive Discord Bot</h3>
-              <p class="project-description">
-                Feature-rich Discord bot for the V Rising gaming community with
-                gear tracking, build sharing, and automated server management.
-              </p>
-              <div class="project-features">
-                <span><i class="fas fa-robot"></i> Bot automation</span>
-                <span><i class="fas fa-users"></i> Community tools</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 9: V Rising API -->
-          <div class="project-card" data-animate="fadeInUp" data-delay="800">
-            <div class="project-image">
-              <div class="placeholder-image">
-                <i class="fas fa-code"></i>
-                <span>REST API</span>
-              </div>
-              <div class="project-badge">
-                <i class="fas fa-lock"></i>
-                <span>Private Project</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                <span class="tag">Rails API</span>
-                <span class="tag">JSON</span>
-                <span class="tag">Redis</span>
-              </div>
-              <h3 class="project-title">V Rising API</h3>
-              <p class="project-description">
-                Comprehensive RESTful API serving game data for V Rising, with
-                real-time updates and caching for optimal performance.
-              </p>
-              <div class="project-features">
-                <span><i class="fas fa-server"></i> API endpoints</span>
-                <span><i class="fas fa-bolt"></i> Cached responses</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="projects-cta" data-animate="fadeInUp">
-          <p>Interested in seeing more of my work?</p>
-          <a
-            href="https://github.com/eliasecasta"
-            target="_blank"
-            class="btn btn-outline"
-          >
-            <i class="fab fa-github"></i> View All on GitHub
-          </a>
+        <div class="workflow" aria-label="Engineering workflow">
+          <article><h3>01 — Understand the real problem</h3><p>Client goals, constraints, existing behavior and measurable acceptance criteria.</p></article>
+          <article><h3>02 — Design the system and context</h3><p>Architecture, integration contracts, repository instructions and change specifications.</p></article>
+          <article><h3>03 — Direct AI-assisted implementation</h3><p>Delegate scoped changes with relevant codebase context and explicit boundaries.</p></article>
+          <article><h3>04 — Verify, don't assume</h3><p>Linting, type checks, unit/integration tests, browser E2E, review and risk-based gates.</p></article>
+          <article><h3>05 — Own the release</h3><p>CI/CD, environment isolation, deployment verification, observability and documented follow-up.</p></article>
         </div>
       </div>
     </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
+    <section class="content" id="skills" aria-labelledby="skills-title">
       <div class="container">
-        <div class="section-header" data-animate="fadeInUp">
-          <h2 class="section-title">Tech Stack</h2>
-          <p class="section-subtitle">Technologies I work with</p>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="skills-grid">
-          <div class="skill-category" data-animate="fadeInUp">
-            <div class="skill-icon">
-              <i class="fas fa-server"></i>
-            </div>
-            <h3>Backend</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Ruby on Rails</span>
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">PostgreSQL</span>
-              <span class="skill-tag">Redis</span>
-            </div>
-          </div>
-
-          <div class="skill-category" data-animate="fadeInUp" data-delay="100">
-            <div class="skill-icon">
-              <i class="fas fa-palette"></i>
-            </div>
-            <h3>Frontend</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">Next.js</span>
-              <span class="skill-tag">TypeScript</span>
-              <span class="skill-tag">Tailwind CSS</span>
-              <span class="skill-tag">Hotwire</span>
-            </div>
-          </div>
-
-          <div class="skill-category" data-animate="fadeInUp" data-delay="200">
-            <div class="skill-icon">
-              <i class="fas fa-tools"></i>
-            </div>
-            <h3>DevOps & Tools</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">Git</span>
-              <span class="skill-tag">Linux</span>
-              <span class="skill-tag">Kamal</span>
-              <span class="skill-tag">CI/CD</span>
-            </div>
-          </div>
-
-          <div class="skill-category" data-animate="fadeInUp" data-delay="300">
-            <div class="skill-icon">
-              <i class="fas fa-vial"></i>
-            </div>
-            <h3>Testing</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">RSpec</span>
-              <span class="skill-tag">Jest</span>
-              <span class="skill-tag">Capybara</span>
-              <span class="skill-tag">Playwright</span>
-              <span class="skill-tag">TDD</span>
-            </div>
-          </div>
+        <div class="section-intro"><div><div class="kicker">03 / Capabilities</div><h2 id="skills-title">Built across the stack.</h2></div><p>Hands-on application engineering with the delivery practices needed for software used by real people.</p></div>
+        <div class="capabilities-grid">
+          <article class="capability"><span class="index">01 / PRODUCT</span><h3>Full-stack applications</h3><p>React, Next.js, TypeScript, JavaScript, Ruby on Rails, Express and REST API design.</p></article>
+          <article class="capability"><span class="index">02 / DATA</span><h3>Business logic &amp; persistence</h3><p>Authentication, roles, bookings, learning workflows, payment integration, SQL and PocketBase.</p></article>
+          <article class="capability"><span class="index">03 / RELEASE</span><h3>Infrastructure &amp; DevOps</h3><p>Docker, GitHub Actions, DigitalOcean, Linux, Nginx, staging/production separation.</p></article>
+          <article class="capability"><span class="index">04 / QUALITY</span><h3>Automated verification</h3><p>Playwright, Vitest/Jest, RSpec, integration checks, code reviews and acceptance tests.</p></article>
+          <article class="capability"><span class="index">05 / OPERATIONS</span><h3>Production reliability</h3><p>Webhook safety, deployment checks, Sentry, secrets, backups and documented recovery practices.</p></article>
+          <article class="capability"><span class="index">06 / AI WORKFLOWS</span><h3>Agentic development</h3><p>Agent instructions, context engineering, scoped delegation, verification loops and engineering memory.</p></article>
         </div>
       </div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section bg-darker">
-      <div class="container">
-        <div class="section-header" data-animate="fadeInUp">
-          <h2 class="section-title">Let's Work Together</h2>
-          <p class="section-subtitle">Have a project in mind? Let's talk.</p>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-info" data-animate="fadeInLeft">
-            <h3>Get in Touch</h3>
-            <p>
-              I'm always interested in hearing about new projects and
-              opportunities. The best way to reach me is through
-              <strong>LinkedIn</strong> — send me a message there and I'll get
-              back to you promptly!
-            </p>
-            <a
-              href="https://www.linkedin.com/in/eliasecasta/"
-              target="_blank"
-              class="btn btn-primary"
-              style="margin-bottom: 2rem"
-            >
-              <i class="fab fa-linkedin-in"></i> Connect on LinkedIn
-            </a>
-
-            <div class="contact-methods">
-              <a
-                href="https://www.linkedin.com/in/eliasecasta/"
-                target="_blank"
-                class="contact-method"
-              >
-                <div class="contact-icon">
-                  <i class="fab fa-linkedin-in"></i>
-                </div>
-                <div class="contact-details">
-                  <span class="contact-label">LinkedIn</span>
-                  <span class="contact-value">/in/eliasecasta</span>
-                </div>
-              </a>
-
-              <a
-                href="https://github.com/eliasecasta"
-                target="_blank"
-                class="contact-method"
-              >
-                <div class="contact-icon">
-                  <i class="fab fa-github"></i>
-                </div>
-                <div class="contact-details">
-                  <span class="contact-label">GitHub</span>
-                  <span class="contact-value">/eliasecasta</span>
-                </div>
-              </a>
-            </div>
-
-            <div class="contact-location">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Mexico</span>
-            </div>
-          </div>
-
-          <div class="contact-form-wrapper" data-animate="fadeInRight">
-            <form
-              id="contact-form"
-              class="contact-form"
-              action="https://formspree.io/f/xayldebv"
-              method="POST"
-            >
-              <!-- Honeypot field to prevent spam - do not fill this out -->
-              <input type="text" name="_gotcha" style="display: none" />
-              <div class="form-group">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your Name"
-                  required
-                />
-                <span class="focus-border"></span>
-              </div>
-              <div class="form-group">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Your Email"
-                  required
-                />
-                <span class="focus-border"></span>
-              </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder="Subject"
-                  required
-                />
-                <span class="focus-border"></span>
-              </div>
-              <div class="form-group">
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  placeholder="Your Message"
-                  required
-                ></textarea>
-                <span class="focus-border"></span>
-              </div>
-              <button type="submit" class="btn btn-primary btn-full">
-                <span>Send Message</span>
-                <i class="fas fa-paper-plane"></i>
-              </button>
-            </form>
-          </div>
+    <section class="background" id="background" aria-labelledby="background-title">
+      <div class="container background-grid">
+        <div><div class="kicker">04 / Background</div><h2 class="section-title" id="background-title">Engineering judgment comes from doing.</h2><p>Before my current client work, I spent years developing and reviewing React/Rails applications, mentoring developers and supporting distributed engineering teams.</p></div>
+        <div class="timeline">
+          <article><div class="when">2025 — Present</div><h3>Independent Full-Stack Product Engineer</h3><p>Client applications, full-cycle delivery and AI-assisted engineering workflows.</p></article>
+          <article><div class="when">2021 — 2025</div><h3>Microverse — React/Rails Engineering &amp; Technical Support</h3><p>Code quality, application work, technical troubleshooting, reviewer training and team leadership.</p></article>
+          <article><div class="when">2019 — 2020</div><h3>Safran Electrical &amp; Power — Software Development Intern</h3><p>C# and SQL Server reporting tools in an aerospace engineering environment in Toulouse.</p></article>
+          <article><div class="when">Education</div><h3>B.Eng. Information Technologies</h3><p>Universidad Tecnológica de Chihuahua · English (advanced) / Spanish (native).</p></article>
         </div>
       </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <span class="logo-bracket">{</span>EC<span class="logo-bracket"
-              >}</span
-            >
-          </div>
-          <div class="footer-social">
-            <a
-              href="https://github.com/eliasecasta"
-              target="_blank"
-              aria-label="GitHub"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/eliasecasta/"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>
-            &copy; 2026 Elías Castañeda. Crafted with passion and clean code.
-          </p>
-        </div>
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-inner">
+        <div><div class="eyebrow">05 / Work together</div><h2 id="contact-title">Let's build something that works.</h2><p>Open to remote product engineering and full-stack software roles with US-based, European and globally distributed teams. Interested in end-to-end ownership and thoughtful AI adoption.</p></div>
+        <div class="actions"><a class="btn btn-primary" href="mailto:e71az@icloud.com">Email me ↗</a><a class="btn btn-outline" href="https://github.com/eliasecasta" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
       </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="js/neon-portfolio.js"></script>
-  </body>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner"><span>© <span id="year">2026</span> Elías Castañeda · Full-Stack Product Engineer</span><div><a href="https://github.com/eliasecasta" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/eliasecasta/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:e71az@icloud.com">Email</a></div></div>
+  </footer>
+  <script>
+    const toggle = document.getElementById('menu-button');
+    const menu = document.getElementById('navlinks');
+    toggle.addEventListener('click', () => {
+      const opened = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!opened));
+      menu.classList.toggle('open', !opened);
+    });
+    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = String(new Date().getFullYear());
+  </script>
+</body>
 </html>
