@@ -1,43 +1,55 @@
-# Elías Castañeda — Full-Stack Product Engineer
+# Elías Castañeda — Personal Engineering Portfolio
 
-**AI-native software delivery, with engineering accountability.**
+**Full-Stack Product Engineer · AI-Assisted Software Development**
 
-Personal engineering portfolio: **https://eliasecasta.github.io/Portfolio/**
+**Live portfolio:** https://eliasecasta.github.io/Portfolio/
 
-## Purpose
+This site highlights client software delivered to production and my work across the full application lifecycle: requirements, architecture, implementation, automated testing, deployment, and operation.
 
-This portfolio highlights production client work and the technical practices behind reliable delivery, not an inflated project count or a collection of technology badges.
+## Design — original visual identity preserved
 
-Featured systems:
+The original **neon-tech visual theme** is intentionally maintained:
 
-- **[Umbala](https://umbala.com.mx/)** — Wellness platform: member access, booking/credits, payment integration, admin operations. React/Vite + Express/Node.js + PocketBase; deployed with Docker on DigitalOcean.
-- **[FIS Certificaciones](https://fiscertificaciones.com.mx/)** — Custom Next.js/TypeScript LMS built to replace legacy WordPress/Masteriyo, including course authoring, quizzes, certificates, permissions, enrollment and migration/release tooling.
-- Additional work: Global Metal Buildings and Riven ROI.
+- Dark backgrounds with cyan accents and glass-style effects.
+- Interactive particles.js network behind the page.
+- Typewriter animation, hero code window, scroll effects and hover interactions.
+- Responsive navigation, existing project grid and card styles.
+- Existing Formspree contact form and linked social profiles.
 
-## AI-assisted engineering position
+The layout and styling are not being redesigned as part of the 2026 career update. The main changes are **copy, correct project descriptions and role wording**.
 
-AI coding agents are used to accelerate scoped implementation, research and testing; architecture, acceptance criteria, code review, automated verification and release responsibility remain human-led.
+## Selected client work
 
-## Site details
+- **[Umbala](https://umbala.com.mx/)**: a client wellness platform for class bookings, account management, credit-based reservations, payments and administrative workflows. React/Vite + Express/Node.js + PocketBase; Docker/DigitalOcean infrastructure.
+- **[FIS Certificaciones](https://fiscertificaciones.com.mx/)**: custom LMS implemented with Next.js/TypeScript/PocketBase as a replacement for a WordPress/Masteriyo installation. Courses, quizzes, certificates, user/admin workflows, migration and quality gates.
 
-- Static, semantic HTML with responsive, in-document CSS and a small vanilla JavaScript navigation controller.
-- Uses local screenshots under `img/projects/`; no third-party animation or icon framework is required.
-- No contact form collecting visitor data; contact links launch mail or open LinkedIn.
-- Project codebases are private. This site publishes only high-level narratives and screenshots of already-public sites, not source or client data.
-- Screenshots may reflect a previous product UI iteration. Live project links are the source for the current public interface.
+Other project cards are retained from the earlier portfolio. Client source repositories remain private; production links and approved public interfaces provide the external evidence.
 
-## Local preview
+## Engineering with AI
 
-Open `index.html` in a browser, or run `python -m http.server 8000` from the repository root and navigate to `http://localhost:8000`.
+I use AI coding agents to accelerate targeted implementation while retaining responsibility for product understanding, architecture, verification and deployment. Practical process: specs and acceptance criteria; repository instructions and relevant context; scoped implementation; tests, code review and CI; production validation.
 
-## Hosting
+## Local development
 
-GitHub Pages serves this repository from the `gh-pages` branch. Review changes on a feature branch and merge after validation.
+This is a static HTML/CSS/JavaScript site. Preview `index.html` locally or run:
+
+```sh
+python -m http.server 8000
+```
+
+Then visit `http://localhost:8000`. Main assets:
+
+- `index.html` — markup and professional information
+- `css/neon-theme.css` — original visual design
+- `js/neon-portfolio.js` — original animations and interactions, with updated typewriter phrases
+- `img/projects/` — existing project thumbnails
+
+Published by GitHub Pages from the `gh-pages` branch.
 
 ## Contact
 
-- [GitHub](https://github.com/eliasecasta)
 - [LinkedIn](https://www.linkedin.com/in/eliasecasta/)
+- [GitHub](https://github.com/eliasecasta)
 - [Email](mailto:e71az@icloud.com)
 
 © 2026 Elías Castañeda.
