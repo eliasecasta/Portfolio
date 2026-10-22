@@ -110,11 +110,11 @@ function initParticles() {
    ======================================== */
 function initTypewriter() {
   const phrases = [
-    'Full Stack Developer',
-    'Ruby on Rails Expert',
-    'React & Next.js Specialist',
-    'Clean Code Advocate',
-    'AI-Enhanced Solutions'
+    'Full-Stack Product Engineer',
+    'AI-Assisted Development',
+    'React & Next.js Developer',
+    'Backend & API Engineering',
+    'Production Software Delivery'
   ];
   
   const typewriterElement = document.querySelector('.typewriter-text');
