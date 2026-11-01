@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently -k \"tsx watch server/index.ts\" \"vite\"",
-    "test": "vitest run",
+    "test": "vitest run --config vitest.config.ts",
     "build": "tsc --noEmit && vite build",
     "start:api": "tsx server/index.ts"
   },
