@@ -1,0 +1,26 @@
+name: MiniBooker sample checks
+
+on:
+  push:
+    paths:
+      - 'code-samples/booking-flow/**'
+      - '.github/workflows/minibooker-checks.yml'
+  pull_request:
+    paths:
+      - 'code-samples/booking-flow/**'
+      - '.github/workflows/minibooker-checks.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: code-samples/booking-flow
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - run: npm test
+      - run: npm run build
