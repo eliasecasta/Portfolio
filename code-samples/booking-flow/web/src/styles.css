@@ -23,6 +23,7 @@ h1 span { color: #67e4da; }
 h2 { margin: 0; font-size: 28px; letter-spacing: -.04em; }
 .demo-badge { border: 1px solid #45636d; border-radius: 6px; padding: 8px 10px; color: #b5cbd4; font-size: 10px; letter-spacing: .09em; white-space: nowrap; }
 .field-label { display: block; color: #c6d3df; font-size: 13px; margin-bottom: 10px; font-weight: 650; }
+.reset-button { margin-bottom: 20px; }
 .email-field { display: block; width: 100%; border: 1px solid #375060; border-radius: 9px; background: #0b1623; color: white; padding: 15px 16px; outline: none; }
 .email-field:focus { border-color: #6ce7d9; box-shadow: 0 0 0 3px #6ce7d922; }
 .sessions { margin-top: 28px; display: grid; gap: 12px; }

@@ -52,6 +52,10 @@ export class BookingStore {
     }
   }
 
+  reset() {
+    this.bookings.length = 0;
+  }
+
   listSlots() {
     return this.slots.map((slot) => ({
       ...slot,

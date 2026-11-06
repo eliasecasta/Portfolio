@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'node:path';
 import { z } from 'zod';
 import { BookingError, type BookingStore } from './bookingStore';
 
@@ -8,7 +9,7 @@ const bookingRequest = z.object({
   requestId: z.string().uuid(),
 }).strict();
 
-export function createApp(store: BookingStore) {
+export function createApp(store: BookingStore, staticDir = process.env.NODE_ENV === 'production' ? path.resolve(process.cwd(), 'dist') : undefined) {
   const app = express();
   app.disable('x-powered-by');
   app.use(express.json({ limit: '8kb' }));
@@ -40,6 +41,20 @@ export function createApp(store: BookingStore) {
       });
     }
   });
+
+  app.post('/api/reset', (_request, response) => {
+    store.reset();
+    response.json({ status: 'reset' });
+  });
+
+  app.use('/api', (_request, response) => {
+    response.status(404).json({ error: { code: 'NOT_FOUND', message: 'API endpoint not found.' } });
+  });
+
+  if (staticDir) {
+    app.use(express.static(staticDir));
+    app.get('*', (_request, response) => response.sendFile(path.join(staticDir, 'index.html')));
+  }
 
   return app;
 }

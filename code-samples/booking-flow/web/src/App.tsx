@@ -62,6 +62,18 @@ export default function App() {
     }
   }
 
+  async function resetDemo() {
+    setFeedback(null);
+    try {
+      const response = await fetch('/api/reset', { method: 'POST' });
+      if (!response.ok) throw new Error('Could not reset the demo.');
+      setSlots(await getSlots());
+      setFeedback({ kind: 'success', text: 'Demo reservations cleared.' });
+    } catch {
+      setFeedback({ kind: 'error', text: 'Could not reset the demo.' });
+    }
+  }
+
   return (
     <main className="shell">
       <header className="hero">
@@ -77,15 +89,17 @@ export default function App() {
           <span className="demo-badge">DEMO DATA</span>
         </div>
 
+        <p className="subtitle">Sessions are fictional. Use a sample email, not personal information. No real reservations, payments, or confirmation emails are processed. Demo data is temporary and shared; reset it to restore seats.</p>
+        <button className="reset-button" type="button" disabled={busySlot !== null} onClick={() => void resetDemo()}>Reset demo</button>
         <label className="field-label" htmlFor="email">Email for your reservation</label>
         <input
           id="email"
           type="email"
           required
-          autoComplete="email"
+          autoComplete="off"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
-          placeholder="you@example.com"
+          placeholder="sample@example.com"
           className="email-field"
         />
 

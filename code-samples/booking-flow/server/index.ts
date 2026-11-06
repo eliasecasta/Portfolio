@@ -16,6 +16,6 @@ const slots: Slot[] = [
 
 const store = new BookingStore(slots);
 const port = Number(process.env.PORT ?? 3001);
-createApp(store).listen(port, '127.0.0.1', () => {
-  console.log('MiniBooker API listening on http://127.0.0.1:' + port);
+createApp(store).listen(port, '0.0.0.0', () => {
+  console.log('MiniBooker listening on port ' + port);
 });
