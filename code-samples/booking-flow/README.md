@@ -1,6 +1,6 @@
 # MiniBooker — Full-stack booking code sample
 
-**Live Demo:** Deployment pending.
+**[Live Demo](https://eliasecasta-minibooker-74739e92ca6d.herokuapp.com/)**
 
 **[Source Code](https://github.com/eliasecasta/Portfolio/tree/gh-pages/code-samples/booking-flow)**
 
