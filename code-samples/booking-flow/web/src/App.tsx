@@ -17,8 +17,8 @@ async function getSlots(): Promise<Slot[]> {
   return payload.slots;
 }
 
-function formatDate(iso: string): string {
-  return new Intl.DateTimeFormat(undefined, { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(iso));
+function formatDate(iso: string, options: Intl.DateTimeFormatOptions): string {
+  return new Intl.DateTimeFormat(undefined, options).format(new Date(iso));
 }
 
 export default function App() {
@@ -75,68 +75,56 @@ export default function App() {
   }
 
   return (
-    <main className="shell">
-      <header className="hero">
-        <div className="eyebrow"><span className="pulse" /> FULL-STACK CODE SAMPLE</div>
-        <h1>Mini<span>Booker</span></h1>
-        <p className="subtitle">Small interface. Real booking rules. Clear engineering trade-offs.</p>
-        <div className="tags"><span>React + TypeScript</span><span>Node.js API</span><span>Tests + Idempotency</span></div>
+    <div className="app">
+      <header className="site-header">
+        <a className="brand" href="/" aria-label="MiniBooker home"><span className="brand-mark" aria-hidden="true">m.</span> minibooker<span className="brand-dot">.</span></a>
+        <div className="header-right"><span className="header-label">A booking experiment</span><a className="source-link" href="https://github.com/eliasecasta/Portfolio/tree/gh-pages/code-samples/booking-flow">View source <span aria-hidden="true">↗</span></a></div>
       </header>
 
-      <section className="panel" aria-labelledby="sessions-title">
-        <div className="section-header">
-          <div><p className="section-kicker">AVAILABLE SESSIONS</p><h2 id="sessions-title">Choose a session</h2></div>
-          <span className="demo-badge">DEMO DATA</span>
+      <main className="shell">
+        <div className="intro">
+          <div><p className="eyebrow"><span className="status-dot" /> THE MINI SESSIONS <span className="eyebrow-muted"> / &nbsp; DEMO 01</span></p>
+            <h1>Good ideas<br /><span>start here.</span></h1>
+            <p className="intro-copy">A little space to explore big ideas. Pick a session, save a seat, and see how a booking flow comes together.</p>
+          </div>
+          <div className="intro-note"><span className="note-number">01 / 03</span><p>Made for curious<br />minds &amp; makers.</p><span className="note-arrow" aria-hidden="true">↘</span></div>
         </div>
 
-        <p className="subtitle">Sessions are fictional. Use a sample email, not personal information. No real reservations, payments, or confirmation emails are processed. Demo data is temporary and shared; reset it to restore seats.</p>
-        <button className="reset-button" type="button" disabled={busySlot !== null} onClick={() => void resetDemo()}>Reset demo</button>
-        <label className="field-label" htmlFor="email">Email for your reservation</label>
-        <input
-          id="email"
-          type="email"
-          required
-          autoComplete="off"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          placeholder="sample@example.com"
-          className="email-field"
-        />
+        <div className="booking-layout">
+          <section className="schedule" aria-labelledby="sessions-title">
+            <div className="section-header"><div><p className="section-kicker">THE SCHEDULE</p><h2 id="sessions-title">Find your session<span className="heading-dot">.</span></h2></div><span className="session-count">{loading ? '—' : String(slots.length).padStart(2, '0')} SESSIONS</span></div>
+            {feedback && <p className={'notice ' + feedback.kind} role={feedback.kind === 'error' ? 'alert' : 'status'}>{feedback.text}</p>}
+            <div className="list-heading" aria-hidden="true"><span>DATE</span><span>SESSION DETAILS</span><span>AVAILABILITY</span></div>
+            {loading ? <p className="empty">Loading sessions…</p> : slots.length === 0 ? <p className="empty">No sessions available right now.</p> : (
+              <div className="sessions">
+                {slots.map((slot) => (
+                  <article className="session" key={slot.id}>
+                    <div className="date-block"><span>{formatDate(slot.startsAt, { month: 'short' })}</span><strong>{formatDate(slot.startsAt, { day: '2-digit' })}</strong><span>{formatDate(slot.startsAt, { weekday: 'short' })}</span></div>
+                    <div className="session-details"><p className="session-category">ONLINE SESSION</p><h3>{slot.title}</h3><p className="session-time">{formatDate(slot.startsAt, { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' })} <span>·</span> Online</p></div>
+                    <div className="session-action"><span className={slot.remaining === 0 ? 'capacity full' : 'capacity'}><span className="capacity-dot" />{slot.remaining === 0 ? 'Fully booked' : slot.remaining + ' of ' + slot.capacity + ' spots left'}</span>
+                      <button className="reserve-button" type="button" disabled={slot.remaining === 0 || busySlot !== null || !email.trim()} onClick={() => void reserve(slot.id)} aria-label={'Reserve a seat for ' + slot.title}>
+                        {busySlot === slot.id ? 'Booking…' : 'Reserve'} <span aria-hidden="true">↗</span>
+                      </button>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
+          </section>
 
-        {feedback && (
-          <p className={'notice ' + feedback.kind} role={feedback.kind === 'error' ? 'alert' : 'status'}>
-            {feedback.text}
-          </p>
-        )}
-
-        {loading ? <p className="empty">Loading sessions…</p> : (
-          <div className="sessions">
-            {slots.map((slot) => (
-              <article className="session" key={slot.id}>
-                <div className="session-details">
-                  <h3>{slot.title}</h3>
-                  <p>{formatDate(slot.startsAt)}</p>
-                  <span className={slot.remaining === 0 ? 'capacity full' : 'capacity'}>
-                    {slot.remaining === 0 ? 'Fully booked' : slot.remaining + ' / ' + slot.capacity + ' seats available'}
-                  </span>
-                </div>
-                <button
-                  type="button"
-                  disabled={slot.remaining === 0 || busySlot !== null || !email.trim()}
-                  onClick={() => void reserve(slot.id)}
-                >
-                  {busySlot === slot.id ? 'Booking…' : 'Reserve seat'} <span aria-hidden="true">↗</span>
-                </button>
-              </article>
-            ))}
-          </div>
-        )}
-      </section>
-
-      <footer>
-        <p>Original portfolio sample · In-memory demo · No payments or real emails</p>
-        <p>Built with AI assistance, reviewed through explicit rules and tests.</p>
-      </footer>
-    </main>
+          <aside className="booking-panel" aria-labelledby="booking-title">
+            <div className="panel-top"><span className="panel-icon" aria-hidden="true">✳</span><span className="panel-index">YOUR DETAILS / 01</span></div>
+            <h2 id="booking-title">Let's get you a seat.</h2>
+            <p className="panel-copy">Enter a sample email, then choose a session from the schedule.</p>
+            <label className="field-label" htmlFor="email">Email address</label>
+            <input id="email" type="email" required autoComplete="off" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="sample@example.com" className="email-field" aria-describedby="email-hint" />
+            <p className="input-hint" id="email-hint">Please don't use personal information.</p>
+            <div className="demo-info"><span className="demo-indicator" aria-hidden="true" /><div><strong>Just a demo, by design.</strong><p>Sessions are fictional. No real reservations, payments, or confirmation emails. Data is temporary and shared.</p></div></div>
+            <button className="reset-button" type="button" disabled={busySlot !== null} onClick={() => void resetDemo()}>Reset demo data <span aria-hidden="true">↻</span></button>
+          </aside>
+        </div>
+      </main>
+      <footer className="site-footer"><span>MINIBOOKER <span className="footer-dot">●</span> AN INTERACTIVE CODE SAMPLE</span><span>Designed to be explored. Built to be understood.</span><a href="https://github.com/eliasecasta/Portfolio/tree/gh-pages/code-samples/booking-flow">VIEW THE CODE ↗</a></footer>
+    </div>
   );
 }
