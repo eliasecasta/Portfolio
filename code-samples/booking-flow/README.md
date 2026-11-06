@@ -1,5 +1,9 @@
 # MiniBooker — Full-stack booking code sample
 
+**Live Demo:** Deployment pending.
+
+**[Source Code](https://github.com/eliasecasta/Portfolio/tree/gh-pages/code-samples/booking-flow)**
+
 A small, original React + TypeScript + Node.js application showing how I structure a real product workflow: booking a limited-capacity class without double-booking or creating duplicate reservations on retries.
 
 **Why this sample?** My production client applications are private. This is a fictional, independent example built for public code review. It does not contain client source code, customer data, or proprietary business logic.
@@ -59,6 +63,19 @@ A new booking returns HTTP 201. Replaying the same requestId and payload returns
 ## Decisions and trade-offs
 
 This deliberately uses in-memory storage to keep the example reviewable. The reservation method performs the capacity check and write synchronously in a single Node.js process. **It is not a production concurrency solution**: multiple instances or restarts require a durable database and a transaction/unique constraints for capacity, idempotency keys, and duplicate bookings. Authentication, rate limiting, payment processing, and persistent audit logs are also out of scope.
+
+The public demo uses fictional sessions and temporary, shared data. Use a sample email, not personal information. The reset button clears all visitors' demo reservations, including idempotency history; restarts also clear them. There are no real reservations, payments, or confirmation emails. Run a single web dyno: multiple processes would have independent state.
+
+## Heroku deployment
+
+From the repository root, after merging the changes into `gh-pages`, deploy the application subtree to an existing dedicated Heroku app:
+
+~~~bash
+git fetch origin gh-pages
+git subtree split --prefix=code-samples/booking-flow origin/gh-pages | xargs -I {} git push https://git.heroku.com/APP_NAME.git {}:refs/heads/main
+~~~
+
+Replace `APP_NAME` with the app name and authenticate with Heroku. The buildpack installs from the lockfile, runs `npm run build`, and starts `npm start`. Heroku's Eco dyno sleeps after inactivity; its first request may take longer. The demo requires no add-ons or database.
 
 The point is to make the rules clear and testable before adding infrastructure. In a production system, I would preserve the domain contract and replace the store with a transactional persistence adapter.
 
