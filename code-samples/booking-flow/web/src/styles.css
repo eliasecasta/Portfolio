@@ -77,9 +77,8 @@ input:focus-visible {
   font-weight: 700;
   text-decoration: none;
 }
-.source-link span {
-  margin-left: 7px;
-}
+.icon { width: 16px; height: 16px; flex: none; }
+.source-link, .site-footer a { display: inline-flex; align-items: center; gap: 7px; }
 .shell {
   max-width: 1440px;
   margin: auto;
@@ -99,7 +98,6 @@ input:focus-visible {
 .panel-index,
 .list-heading,
 .session-count,
-.note-number,
 .site-footer {
   font-size: 10px;
   font-weight: 700;
@@ -151,26 +149,8 @@ h1 span {
   max-width: 440px;
   margin: 0;
 }
-.intro-note {
-  border-left: 1px solid #d8ddd9;
-  padding: 4px 0 0 24px;
-  min-width: 185px;
-  align-self: end;
-}
-.note-number {
-  color: #999fa2;
-}
-.intro-note p {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 14px;
-  line-height: 1.45;
-  font-weight: 600;
-  margin: 13px 0 15px;
-}
-.note-arrow {
-  font-size: 23px;
-  color: #2b5ddd;
-}
+.intro-illustration { width: min(37%, 385px); flex: none; }
+.intro-illustration img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 4px; }
 .booking-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
@@ -300,9 +280,9 @@ h1 span {
     color 0.15s,
     border-color 0.15s;
 }
-.reserve-button span {
+.reserve-button .icon {
   float: right;
-  margin-left: 12px;
+  margin-left: 10px;
   color: #285be5;
 }
 .reserve-button:hover:not(:disabled) {
@@ -310,7 +290,7 @@ h1 span {
   color: #fff;
   border-color: #2459db;
 }
-.reserve-button:hover:not(:disabled) span {
+.reserve-button:hover:not(:disabled) .icon {
   color: #fff;
 }
 .reserve-button:disabled {
@@ -416,9 +396,7 @@ h1 span {
   cursor: pointer;
   margin: 22px 0 0 17px;
 }
-.reset-button span {
-  margin-left: 5px;
-}
+.reset-button { display: inline-flex; align-items: center; gap: 6px; }
 .reset-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -479,8 +457,7 @@ h1 span {
   .site-header {
     height: 68px;
   }
-  .header-label,
-  .intro-note {
+  .header-label {
     display: none;
   }
   .header-right {
@@ -489,7 +466,11 @@ h1 span {
   .intro {
     min-height: auto;
     padding: 52px 0 42px;
+    flex-direction: column;
+    align-items: stretch;
   }
+  .intro-illustration { width: 100%; max-width: 460px; }
+  .intro-illustration img { aspect-ratio: 2 / 1; }
   .intro-copy {
     font-size: 14px;
   }
