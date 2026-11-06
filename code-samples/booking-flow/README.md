@@ -75,7 +75,7 @@ git fetch origin gh-pages
 git subtree split --prefix=code-samples/booking-flow origin/gh-pages | xargs -I {} git push https://git.heroku.com/APP_NAME.git {}:refs/heads/main
 ~~~
 
-Replace `APP_NAME` with the app name and authenticate with Heroku. The buildpack installs from the lockfile, runs `npm run build`, and starts `npm start`. Heroku's Eco dyno sleeps after inactivity; its first request may take longer. The demo requires no add-ons or database.
+Replace `APP_NAME` with the app name and authenticate with Heroku. The buildpack installs from the lockfile, runs `npm run build`, and starts `npm start`. The demo runs on one Basic dyno and requires no add-ons or database. If using an Eco dyno instead, it sleeps after inactivity and its first request may take longer.
 
 The point is to make the rules clear and testable before adding infrastructure. In a production system, I would preserve the domain contract and replace the store with a transactional persistence adapter.
 
