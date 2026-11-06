@@ -6,6 +6,15 @@
 
 This site highlights client software delivered to production and my work across the full application lifecycle: requirements, architecture, implementation, automated testing, deployment, and operation.
 
+## Explore the code: MiniBooker
+
+MiniBooker is a public full-stack booking sample for reviewing how I design, build, and test a product workflow. Try the app in your browser—no clone or setup required—or explore the source and engineering notes:
+
+- **[Try the live demo](https://eliasecasta-minibooker-74739e92ca6d.herokuapp.com/)**
+- **[Browse the source code and documentation](code-samples/booking-flow/)**
+
+The sample uses React, TypeScript, and an Express API to demonstrate validation, capacity limits, duplicate prevention, idempotency, and automated tests. Sessions are fictional and data is temporary; use a sample email rather than personal information.
+
 ## Design — original visual identity preserved
 
 The original **neon-tech visual theme** is intentionally maintained:
